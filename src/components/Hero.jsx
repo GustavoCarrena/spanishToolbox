@@ -7,6 +7,8 @@ export const Hero = () => {
   
   const { width } = useWindowDimensions();
 
+
+
   return (
     <section className={styles.heroContainer}>
       <div className={styles.leftBookcaseContainer}>

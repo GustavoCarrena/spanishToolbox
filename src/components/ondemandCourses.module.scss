@@ -1,0 +1,135 @@
+@use "../../styles/mixins.scss"as mixin;
+
+.sectionContainer{
+    background-color: var(--red);
+    @include mixin.flex-column-nowrap(center, center);
+    .headerContainer{
+        @include mixin.flex-row-nowrap(center, center);
+        margin: 26px 0 33px -6%;
+        @media(min-width:500px){
+            width: 80%;
+            justify-content: space-between;
+        }
+        .headerLogo{
+            width: 50px;
+            @media(min-width:500px){
+                width: 90px;
+            }
+        }
+        .textContainer{
+            @include mixin.flex-column-nowrap(center, center);
+            @media(min-width:500px){
+                width: 308px;
+                align-items: flex-start;
+            }
+            margin: 0;
+                .text{
+                    width: 100%;
+                    height: 100%;
+                    font-family: var(--montserrat-font);
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    line-height: 1.2rem;
+                    color: #eee;
+                    margin: 0;
+                    text-align: center;
+                    @media(min-width:500px){
+                        text-align: start;
+                        font-size: 1.5rem;
+                        line-height: 1.5rem;
+                    }
+                }
+                .line{
+                    width: 84px;
+                    border-bottom: 1px solid var(--yellow);
+                    padding-top: 9px;
+                    @media(min-width:500px){
+                        width: 105px;
+                        margin-left: 68px;
+                    }
+                }
+        }
+    }
+    .mainContainer{
+        @include mixin.flex-column-nowrap(center, center);
+        width: 85%;
+        .cardsContainer{
+            @include mixin.flex-column-nowrap(center, center);
+            width: 100%;
+            .cards{
+                @include mixin.flex-column-nowrap(center, center);
+                width: 100%;
+                height: fit-content;
+                max-width: 400px;
+                margin-bottom: 40px;
+                @media(min-width:500px){
+                    max-width: 450px;
+                }
+                .cardImg{
+                    width: 100%;
+                    max-width: 290px;
+                    height: 170px;
+                    border-radius: 30px;
+                    @media(min-width:500px){
+                        max-width: 320px;
+                        height: 190px;
+                    }
+                }
+                .cardTitleContainer{
+                    @include mixin.flex-column-nowrap(center, center);
+                    width: 100%;
+                    max-width: 300px;
+                    height: fit-content;
+                    margin-top: 10px;
+                    @media(min-width:500px){
+                        max-width: 320px;
+                    }
+                    .cardTitle{
+                        width: 100%;
+                        font-size: 0.95rem;
+                        font-family: var(--montserrat-font);
+                        font-weight: 600;
+                        color: var(--yellow);
+                        text-align: center;
+                        @media(min-width:500px){
+                            font-size: 1.15rem;
+                        }
+                    }
+                    .cardTextContainer{
+                        @include mixin.flex-column-nowrap(center, flex-start);
+                        width: 90%;
+                        height: fit-content;
+                        .cardText{
+                            font-size: 0.75rem;
+                            text-align: center;
+                            font-family: var(--montserrat-font);
+                            font-weight: 500;
+                            color: var(--white);
+                            @media(min-width:500px){
+                                font-size: 0.85rem;
+                            }
+                        }
+                    }
+                }
+
+                .cardButton{
+                    width: 160px;
+                    height: 48px;
+                    border-radius: 24px;
+                    border: none;
+                    background-color: var(--violet);
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 8px;
+                    font-family: var(--noto-font);
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    line-height: 1.29rem;
+                    color: #fcfcfc;
+                    text-decoration: none;
+                    padding: 14px 41px;
+                }
+            }
+        }
+    }
+}

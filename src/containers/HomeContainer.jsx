@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hero } from '../components/Hero';
 import { LetsLearn } from '../components/LetsLearn';
+import { OndemandCourses } from '../components/OndemandCourses';
 import { OnlineCourses } from '../components/OnlineCourses';
 
 export const HomeContainer = () => {
@@ -9,6 +10,7 @@ export const HomeContainer = () => {
       <Hero/>
       <LetsLearn/>
       <OnlineCourses/>
+      <OndemandCourses/>
     </>
   )
 }
