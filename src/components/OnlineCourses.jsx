@@ -10,8 +10,8 @@ export const OnlineCourses = () => {
                     HOME</span><span className="second-line"> WITH THE BEST NATIVE TEACHERS</span></p>
         </div>
         <div className={styles.videoContainer}>
-            <video className={styles.videoMobile} src="assets/img/video/mobile.mp4" muted loop autoplay/>
-            <video className={styles.videoDesktop} src="assets/img/video/desktop.mp4" muted loop autoplay/>
+            <video className={styles.videoMobile} src="assets/img/video/mobile.mp4" muted loop autoPlay/>
+            <video className={styles.videoDesktop} src="assets/img/video/desktop.mp4" muted loop autoPlay/>
         </div>
     </section>
 )
