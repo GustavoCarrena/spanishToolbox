@@ -9,7 +9,6 @@ export const Hero = () => {
 
   return (
     <section className={styles.heroContainer}>
-      
       <div className={styles.leftBookcaseContainer}>
         <img
           className={styles.leftBookcaseImg}
@@ -18,6 +17,7 @@ export const Hero = () => {
           alt="bookcase"
         />
       </div>
+
 
     <div className={styles.mainAreaContainer}>
         
@@ -77,6 +77,7 @@ export const Hero = () => {
             <img className={styles.whiteTopImg} src="/assets/img/hero/hero_curva-blanca.svg" alt="" preserveAspectRatio="none"/>
     </div>
     <img src="/assets/img/hero/hero_circ-violeta.svg" alt="circle image" className={styles.violetCircle}/>
+
   </section>
   );
 };
