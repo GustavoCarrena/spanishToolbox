@@ -1,0 +1,55 @@
+@use "../../styles/mixins.scss"as mixin;
+
+.onlineSection{
+    .textContainer{
+        position: absolute;
+        width: 100%;
+        @include mixin.flex-column-nowrap(center, center);
+        margin-top: 288px;
+        @media(min-width:768px){
+            margin-top: 128px;
+            right: 30%;
+        }
+        .textHeader{
+            font-size: 1.4rem;
+            font-family: var(--montserrat-font);
+            font-weight: 600;
+            color: #ffffff;
+            @media(min-width:768px){
+                color: var(--violet);
+            }
+        }
+        .text{
+            @include mixin.flex-column-nowrap(center, center);
+            font-size: 0.8rem;
+            line-height: 1.15rem;
+            font-family: var(--montserrat-font);
+            font-weight: 600;
+            color: var(--blue);
+            background-color: var(--yellow);
+            padding: 2.5px;
+            text-align: center;
+        }
+    }
+    .videoContainer{
+        width: 100vw;
+        height: 438px;
+        .videoDesktop{
+            @media(max-width:767px){
+                display: none;
+            }
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .videoMobile{
+            @media(min-width:768px){
+                display: none;
+            }
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+}

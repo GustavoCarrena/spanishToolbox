@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&family=Noto+Sans:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: ball-pen;
+    src: url('../fonts/Ball-Pen-Regular.woff'), url('../fonts/Ball-Pen-Extra.woff');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 16px;
+    --black: #3c3c3c;
+    --first-orange: #fe5757;
+    --second-orange: #eb585a;
+    --violet: #512583;
+    --yellow: #f9c640;
+    --blue: #2f6fb6;
+    --gray: #9d9a9a;
+    --white: #fcfcfc;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --noto-font: 'Noto Sans', sans-serif;
+}
+

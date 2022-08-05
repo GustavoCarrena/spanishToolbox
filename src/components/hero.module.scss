@@ -1,0 +1,352 @@
+@use "../../styles/mixins.scss"as mixin;
+
+.heroContainer {
+    position: relative;
+    background-color: var(--yellow);
+
+    @media(max-width:991px) {
+        @include mixin.flex-column-nowrap(center, center);
+    }
+
+    @media(min-width:992px) {
+        @include mixin.flex-row-nowrap (center, space-between);
+        height: 544px;
+    }
+
+    @media(min-width:1200px) {
+        height: 583px;
+    }
+
+    @media(min-width:1300px) {
+        height: 612px;
+    }
+
+    .leftBookcaseContainer, .rightBookcaseContainer {
+        @media(max-width:991px) {
+            display: none;
+        }
+
+        @media(min-width:992px) {
+            position: relative;
+            width: 18.3%;
+            min-width: 187px;
+            max-width: 206px;
+            height: 471px;
+            max-height: 471px;
+            align-self: flex-end;
+            margin-left: 3.3%;
+            top: -8px;
+            display: flex;
+            align-items: flex-end;
+
+        }
+
+        @media(min-width:1000px) {
+            min-width: 166px;
+        }
+
+        @media(min-width:1100px) {
+            top: -4px;
+        }
+
+        @media(min-width:1180px) {
+            top: -2px;
+        }
+
+        @media(min-width:1200px) {
+            width: 200px;
+            top: 0;
+        }
+
+        .leftBookcaseImg, .rightBookcaseImg {
+            position: relative;
+            top: 0 !important;
+            left: 0 ;
+            width: 100%;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .rightBookcaseContainer{
+        margin-right: 3.8%;
+    }
+
+    @media(min-width:992px){
+        .leftBookcaseContainer{
+            margin-right: 2%;
+        }
+    }
+
+    .mainAreaContainer {
+        padding-top: 50px;
+        @include mixin.flex-column-nowrap (center, center);
+
+        @media(max-width: 991px) {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        @media(min-width: 992px) {
+            width: 57%;
+            max-width: 620px;
+            height: 100%;
+        }
+
+        @media(min-width: 1020px) {
+            width: 530px;
+            max-width: none;
+        }
+
+        @media(min-width: 1200px) {
+            width: 670px;
+        }
+
+        .calendarWatchContainer {
+            @include mixin.flex-row-nowrap (center, space-between);
+            width: 100%;
+            height: max-content;
+            margin: 20px 0 -10px 0;
+
+            @media(min-width:992px){
+                margin: 77px 0 -10px 0;
+            }
+
+            @media(min-width:1100px){
+                margin: 6px 0 -8px 0;
+            }
+
+            @media(min-width:1200px){
+                margin: 65px 0 -30px 0;
+            }
+
+            @media(min-width:1200px){
+                margin: 95px 0 -40px 0;
+            }
+
+            .calendarContainer {
+                position: relative;
+                width: 15%;
+                max-width: 110px;
+                height: 163px;
+                margin-left: 13%;
+
+                .calendarImg {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            .watchContainer {
+                position: relative;
+                width: 15%;
+                max-width: 110px;
+                height: 163px;
+                margin-right: 13%;
+
+                .watchImg {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+
+        .deskContainer {
+            width: 85%;
+            text-align: center;
+            @media(min-width:992px){
+                height: 448px;
+                width: 100%;
+
+            }
+            .deskMobileImg {
+                width: 100%;
+                @media(min-width:600px){
+                    position: relative;
+                    bottom: 10px;
+                }
+                @media(min-width:750px){
+                    bottom: 25px;
+                }
+                @media(min-width:900px){
+                    bottom: 35px;
+                }
+                @media(min-width:992px){
+                    display: none;
+                }
+            }
+
+            .effectContainer{
+                @media(max-width:991px){
+                    display: none;
+                }
+                @include mixin.flex-column-nowrap (center, flex-end);
+                width: 100%;
+                height: 300px;
+                position: relative;
+                bottom: 14px;
+
+                .helloScreenDeskContainer{
+                    width: 100%;
+                    height: 289px;
+                    @include mixin.flex-column-nowrap (center, flex-end);
+                    .hello{
+                        position: relative;
+                        width: 301px;
+                        height: 100px;
+                        margin-bottom: -50px;
+                        z-index: 999;
+                        top: 35px;
+                        .helloImg{
+                            position: absolute;
+                            width: 100%;
+                            height: 95px;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                    .screen{
+                        position: relative;
+                        width: 194px;
+                        height: 150px;
+                        z-index: 998;
+                        top: 54px;
+                        .screenImg{
+                            position: absolute;
+                            width: 100%;
+                            height: 158px;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                    .desk{
+                        position: relative;
+                        width: 100%;
+                        max-width: 535.67px;
+                        height: 264px;
+                        top: 7px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .deskImg{
+                            position: absolute;
+                            width: 100%;
+                            height: 97%;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                        }
+                    }
+                }
+
+
+                .appleLampContainer{
+                    @media(min-width:992px){
+                        position: absolute;
+                        width: max-content;
+                        bottom: 61px;
+                        right: 9px;
+                        @include mixin.flex-row-nowrap (flex-end, center);
+                    }
+
+                    @media(min-width:1013px){
+                        right: 27px;
+                    }
+
+                    @media(min-width:1020px){
+                        right: 20px;
+                    }
+
+                    @media(min-width:1200px){
+                        right: 90px;
+                    }
+                    
+                    .apple{
+                        position: relative;
+                        width: 38px;
+                        height: 60px;
+                        margin-right: 8px;
+                        .appleImg{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            right: 0;
+    
+                        }
+                    }
+    
+                    .lamp{
+                        position: relative;
+                        width: 119px;
+                        height: 162px;
+                        .lampImg{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .whiteTop{
+        position: absolute;
+        width: 100vw;
+        height: 20%;
+        bottom: -8%;
+
+        @media(min-width:750px){
+            bottom: -5%;
+        }
+
+        @media(min-width:768px){
+            height: 78px;
+            bottom: -3%;
+        }
+
+        @media(min-width:992px){
+            height: 76px;
+            bottom: -21px;
+            transform: scaleY(0.5);
+        }
+        @media(min-width:1100px){
+            bottom: -1px;
+            transform: scaleY(1);
+            height: auto;
+        }
+
+        @media(min-width:1200px){
+            bottom: -14px;
+            transform: scaleY(0.8);
+        }
+
+        @media(min-width:1300px){
+            bottom: -7px;
+            transform: scaleY(0.9);
+        }
+        .whiteTopImg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .violetCircle{
+        @media(max-width:991px){
+            display: none;
+        }
+        position: absolute;
+        width: 80px;
+        z-index: 999;
+        right: 0;
+        top: 200px;
+    }
+}

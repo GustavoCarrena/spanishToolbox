@@ -1,0 +1,35 @@
+
+@mixin flex-row-nowrap ($align-items, $justify-content){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: $align-items;
+    justify-content: $justify-content;
+};
+
+@mixin flex-row-wrap ($align-items, $justify-content){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: $align-items;
+    justify-content: $justify-content;
+};
+
+@mixin flex-column-nowrap ($align-items, $justify-content){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: $align-items;
+    justify-content: $justify-content;
+};
+
+@mixin flex-column-wrap ($align-items, $justify-content){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: $align-items;
+    justify-content: $justify-content;
+};
+
+
+
