@@ -1,8 +1,3 @@
-
-
-const root = document.getElementById("root")
-
-
 $(document).ready(function(){
     $('#leftBookcase').plaxify({"xRange":25,"yRange":0,"data-invert":false})
     $('#calendar').plaxify({"xRange":15,"yRange":0,"data-invert":true})
