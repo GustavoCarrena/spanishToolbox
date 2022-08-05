@@ -6,7 +6,7 @@ export const OnlineCourses = () => {
     <section className={styles.onlineSection}>
         <div className={styles.textContainer}>
             <h2 className={styles.textHeader}>ONLINE COURSES</h2>
-            <p className={styles.text}><span class="first-line">LEARN SPANISH FROM YOUR
+            <p className={styles.text}><span>LEARN SPANISH FROM YOUR
                     HOME</span><span className="second-line"> WITH THE BEST NATIVE TEACHERS</span></p>
         </div>
         <div className={styles.videoContainer}>
