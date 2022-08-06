@@ -3,6 +3,8 @@ import { Hero } from '../components/Hero';
 import { LetsLearn } from '../components/LetsLearn';
 import { OndemandCourses } from '../components/OndemandCourses';
 import { OnlineCourses } from '../components/OnlineCourses';
+import { TestLevel } from '../components/TestLevel';
+import { WhyUs } from '../components/WhyUs';
 
 export const HomeContainer = () => {
   return (
@@ -11,6 +13,8 @@ export const HomeContainer = () => {
       <LetsLearn/>
       <OnlineCourses/>
       <OndemandCourses/>
+      <WhyUs/>
+      <TestLevel/>
     </>
   )
 }
