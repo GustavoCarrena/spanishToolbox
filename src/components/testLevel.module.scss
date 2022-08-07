@@ -1,7 +1,7 @@
 @use "../../styles/mixins.scss"as mixin;
 @font-face {
-    font-family: 'ball-pen';
-    src: url('assets/fonts/ball-pen.ttf');
+    font-family: "ballpen";
+    src: url('assets/fonts/ballpen.ttf') format("truetype"),
 }
 
 
@@ -228,7 +228,7 @@
                     width: 100%;
                     .title {
                         font-size: 3.5rem;
-                        font-family: 'ball-pen',sans-serif;                        font-weight: normal;
+                        font-family: "ballpen", sans-serif;                        
                         line-height: 0.8rem;
                         text-align: center;
                         color: var(--white);

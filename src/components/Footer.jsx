@@ -44,15 +44,18 @@ export const Footer = () => {
 
         </main>
 
-        {/* <footer>
+        <footer className={styles.footer}>
             
-            <div className={styles.allRightsReserved}><span>© 2022 The Spanish Toolbox.</span> <span>All Rights Reserved.</span></div>
+            <div className={styles.allRightsReserved}>
+                <span>© 2022 The Spanish Toolbox.</span>
+                <span>All Rights Reserved.</span>
+            </div>
             
             <div className={styles.socialMedia}>
-                <img className={styles.socialMediaIcon} src="img/home/footer/iconos_instagram.svg" alt="image" />
-                <img className={styles.socialMediaIcon} src="img/home/footer/iconos_linkedin.svg" alt="image" />
-                <img className={styles.socialMediaIcon} src="img/home/footer/iconos_messenger.svg" alt="image" />
-                <img className={styles.socialMediaIcon} src="img/home/footer/iconos_correo.svg" alt="image" />
+                <img className={styles.socialMediaIcon} src="assets/img/footer/iconos_instagram.svg" alt="image" />
+                <img className={styles.socialMediaIcon} src="assets/img/footer/iconos_linkedin.svg" alt="image" />
+                <img className={styles.socialMediaIcon} src="assets/img/footer/iconos_messenger.svg" alt="image" />
+                <img className={styles.socialMediaIcon} src="assets/img/footer/iconos_correo.svg" alt="image" />
             </div>
             
             <div className={styles.termsContainer}>
@@ -60,7 +63,7 @@ export const Footer = () => {
                 <span className={styles.privacy}>Terms of Service</span>
             </div>
         
-        </footer> */}
+        </footer>
 
     </section>
   )
