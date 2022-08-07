@@ -1,0 +1,100 @@
+@use "../../styles/mixins.scss"as mixin;
+
+.sectionContainer{
+    @include mixin.flex-column-nowrap(center, center);
+    .main{
+        @include mixin.flex-column-nowrap(center, center);
+        background-color: var(--yellow);
+        width: 100vw;
+        .mainLogo{
+            width: 90px;
+            height: 110px;
+            margin: -60px 0 0 -57%;
+        }
+
+        .mainContent{
+            @include mixin.flex-column-nowrap(center, center);
+            .mainContentLogoContainer{
+                @include mixin.flex-row-nowrap(center, flex-start);
+                width: 83%;
+                margin-bottom: 15px;
+                .mainContentLogoImg{
+                    margin-right: 0.95%;
+                    height: 29px;
+                }
+                .mainContentLogoTitle{
+                    width: max-content;
+                    height: auto;
+                    font-family: var(--montserrat-font);
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.2rem;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #3c3c3c;
+                    margin-top: 2%;
+                }
+
+            }
+            .mainContentLogoText{
+                font-family: var(--noto-font);
+                font-weight: 600;
+                font-size: 0.9rem;
+                line-height: 1rem;
+                text-align: center;
+                color: var(--second-orange);
+                width: 78%;
+                height: 37px;            
+                align-self: center;
+            }
+            .linkContainer{
+                @include mixin.flex-row-nowrap(center, space-between);
+                width: 80%;
+                padding: 0;
+                .link{
+                    text-decoration: none;
+                    font-family: var(--noto-font);
+                    font-size: 1rem;
+                    font-weight: 600;
+                    line-height: 1.33rem;
+                    text-align: center;
+                    color: var(--white);
+                    border-bottom: 2px solid var(--first-orange);
+                }
+            }
+        }
+    }
+
+    .languageCourses{
+        .title{
+
+        }
+        .contentContainer{
+            .content{
+                @media(max-width:767px){
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .specialCourses{
+        .title{
+
+        }
+
+        .contentContainer{
+            .content{
+                @media(max-width:767px){
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+
+
+}

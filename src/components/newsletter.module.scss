@@ -2,6 +2,7 @@
 
 .sectionContainer{
     @include mixin.flex-column-nowrap(center, center);
+    margin-bottom: 80px;
     .headerContent{
         @include mixin.flex-column-nowrap(center, center);
         width: 100vw;
@@ -193,7 +194,8 @@
             width: 100px;
         }
         @media(min-width:1124px){
-            right: 7%;
+            right: 6%;
+            width: 140px;
         }
 
     }
