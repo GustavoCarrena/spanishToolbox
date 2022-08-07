@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&family=Noto+Sans:wght@400;600;700&display=swap');
 
-@font-face {
-    font-family: ball-pen;
-    src: url('../fonts/Ball-Pen-Regular.woff'), url('../fonts/Ball-Pen-Extra.woff');
-}
-
 * {
     box-sizing: border-box;
     padding: 0;

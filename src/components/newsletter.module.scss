@@ -1,0 +1,202 @@
+@use "../../styles/mixins.scss"as mixin;
+
+.sectionContainer{
+    @include mixin.flex-column-nowrap(center, center);
+    .headerContent{
+        @include mixin.flex-column-nowrap(center, center);
+        width: 100vw;
+        margin-top: 20px;
+        @media(min-width:768px){
+            margin: 20px 0 30px 0;
+        }
+        .titleContanier{
+            @include mixin.flex-row-nowrap(center, flex-start);
+            @media(min-width:375px){
+                justify-content: space-evenly;
+                width: 60%;
+                padding-right: 25%;
+            }
+            @media(min-width:425px){
+                padding-right: 21%;
+            }
+            @media(min-width:500px){
+                padding-right: 18%;
+            }
+            @media(min-width:560px){
+                padding-right: 16%;
+            }
+            @media(min-width:768px){
+                padding-right: 0;
+                margin: 20px;
+            }
+            width: 100%;
+            .img{
+                width: 100px;
+                transform: rotate(-7deg);
+                @media(min-width:768px){
+                    position: absolute;
+                    width: 154px;
+                    height: 172px;
+                    left: 0;
+                    margin-top: 65px;
+                }
+                @media(min-width:992px){
+                    width: 180px;
+                    height: 200px;
+                    left: 10%;
+                }
+                @media(min-width:1124px){
+                    left: 13%;
+                }
+            }
+            .title{
+                @include mixin.flex-column-nowrap(center, center);
+                font-family: var(--montserrat-font);
+                font-size: 1.7rem;
+                font-weight: 700;
+                line-height: 1.31rem;
+                text-align: center;
+                color: #3d3d3d;
+                @media(min-width: 1124px){
+                    font-size: 2.3rem;
+                }
+                .line{
+                    border-bottom: solid 2px #cfcfcf;
+                    width: 70%;
+                    padding-top: 4px;
+                    @media(min-width: 1124px){
+                        width: 80%;
+                        padding-top: 10px;
+                        }
+                 }
+            }
+        }
+        
+        .suscribe{
+            font-size: 0.9rem;
+            font-family: var(--montserrat-font);
+            font-weight: 500;
+            line-height: 1.22rem;
+            color: var(--violet);
+            margin: 15px 0;
+            width: 85%;
+            max-width: 319px;
+            text-align: center;
+            @media(min-width:600px){
+                max-width: 375px;
+            }
+            @media(min-width:1124px){
+                max-width: 350px;
+                font-size: 1rem;
+            }
+        }
+        .formContainer{
+            @include mixin.flex-column-nowrap(center, center);
+            width: 85%;
+            max-width: 305px;
+            @media(min-width:600px){
+                max-width: 375px;
+            }
+            @media(min-width:768px){
+                @include mixin.flex-row-nowrap(center, center);
+                max-width: 400px;
+            }
+
+            .input{
+                width: 100%;
+                height: 40px;
+                border: solid 2px #8e8d8f;
+                border-radius: 1.5rem;
+                padding-left: 10px;
+                font-family: var(--noto-font);
+                font-size: 0.9rem;
+                font-weight: 600;
+                line-height: 1.38rem;
+                text-align: left;
+                color: var(--gray);
+                margin-bottom: 20px;
+                @media(min-width:768px){
+                    margin-bottom: 0;
+                }
+            }
+            .button{
+                width: 100%;
+                height: 40px;
+                border-radius: 1.5rem;
+                background-color: var(--violet);
+                text-align: center;
+                border: none;
+                margin-left: 3.10%;
+                font-family: var(--noto-font);
+                font-size: 1rem;
+                font-weight: 600;
+                line-height: 1.38rem;
+                color: var(--yellow);
+                text-decoration: none;
+                padding: 10px 19px;
+                @media(min-width:600px){
+                    max-width: 200px;
+                }
+                @media(min-width:768px){
+                    @include mixin.flex-row-nowrap(center, center);
+                    max-width: 100px;                
+                }
+            }
+    
+        }
+    }
+    .papers{
+        @media(max-width:767px){
+            display: none;
+        }
+        @media(min-width:768px){
+            position: absolute;
+            width: 90px;
+            right: 79px;
+            height: 256px;
+        }
+        @media(min-width:992px){
+            right: 16%;
+        }
+        @media(min-width:1124px){
+            right: 19%;
+        }
+
+        .regularPaper{
+            transform: rotate(8.5deg);
+            width: 85%;
+            height: 85px;
+            margin-left: 19px;
+        }
+        .smallPaper{
+            transform: rotate(-12.5deg);
+            width: 67px;
+            height: 70px;
+            margin-bottom: -110px;
+            margin-left: -10px;
+        }
+    }
+    .lamp{
+        @media(max-width:767px){
+            display: none;
+        }
+        @media(min-width:768px){
+            position: absolute;
+            width: 87px;
+            right: 17px;
+            margin-top: 60px;
+            transform: scaleX(-1);
+        }
+
+        @media(min-width:992px){
+            right: 5%;
+            width: 100px;
+        }
+        @media(min-width:1124px){
+            right: 7%;
+        }
+
+    }
+
+
+}

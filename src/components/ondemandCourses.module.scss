@@ -101,12 +101,13 @@
 
                 @media(min-width:992px){
                     max-width: 270px;
-                    height: 430px;
+                    height: 490px;
+                    margin-bottom: 30px;
                 }
 
                 @media(min-width:1200px){
                     max-width: 430px;
-                    height: 500px;
+                    height: 540px;
                 }
 
                 .cardImg{
@@ -124,7 +125,7 @@
                     }
 
                     @media(min-width:992px){
-                        height: 180px;
+                        height: 205px;
                     }
                     @media(min-width:1200px){
                         height: 210px;
@@ -145,13 +146,18 @@
                     }
                     @media(min-width:992px){
                         margin-top: 0;
-                        height: 220px;
+                        height: 284px;
                     }
                     @media(min-width:1200px){
                         width: 95%;
-                        height: 270px;
                         margin-bottom: 15px;
                     }
+
+                    @media(min-width:1300px){
+                        height: 300px;
+                    }
+
+
                     .cardTitle{
                         width: 100%;
                         font-size: 0.95rem;
@@ -171,6 +177,10 @@
                         }
                         @media(min-width:992px){
                             font-size: 1.1rem;
+                            height: 72px;
+                        }
+                        @media(min-width:1200px){
+                            padding-top: 16px;
                         }
                     }
                     .cardTextContainer{
@@ -183,6 +193,11 @@
                         @media(min-width:768px){
                             height: 134px;
                         }
+
+                        @media(min-width:992px){
+                            width: 85%;
+                        }
+
                         @media(min-width:1200px){
                             height: 190px;
                         }
@@ -204,8 +219,7 @@
                                 padding-top: 5px;
                             }
                             @media(min-width:1300px){
-                                padding-top: 10px;
-                                width: 85%;
+                                width: 90%;
                             }
                         }
                     }

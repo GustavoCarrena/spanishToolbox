@@ -7,8 +7,8 @@ export const TestLevel = () => {
         
         <div className={styles.firstContainer}>
             <div className={styles.leftImgContainer}>
-                <img className={styles.leftImg} src="img/home/generales/iconos-izq.svg" alt="images" />
-                <img className={styles.rightImg}src="img/home/generales/iconos-der.svg" alt="images" />
+                <img className={styles.leftImg} src="assets/img/generales/iconos-izq.svg" alt="images" />
+                <img className={styles.rightImg}src="assets/img/generales/iconos-der.svg" alt="images" />
             </div>
             <div className={styles.allLevelsInfoContainer}>
                 <div className={styles.allLevels}>
@@ -20,13 +20,13 @@ export const TestLevel = () => {
                 <button className={styles.allLevelsBtn} href="levels_information.html">Read More</button>
             </div>
             <div className={styles.rightImgContainer}>
-                <img className={styles.img} src="img/home/generales/iconos-der.svg" alt="images"/>
+                <img className={styles.img} src="assets/img/generales/iconos-der.svg" alt="images"/>
             </div>
         </div>
 
-        {/* <div className={styles.secondContainer}>
+        <div className={styles.secondContainer}>
             <div className={styles.testLevelsContainer}>
-                <img className={styles.testLevelsImg} src="img/home/fotos/AdobeStock_103519056.jpg" alt="photo"/>
+                <img className={styles.testLevelsImg} src="assets/img/fotos/AdobeStock_103519056.jpg" alt="photo"/>
                 <div className={styles.testYourLevel}>
                     <div className={styles.titleContainer}>
                         <h2 className={styles.title}>Test your level</h2>
@@ -39,11 +39,12 @@ export const TestLevel = () => {
                 </div>
             </div>
             <div className={styles.arrowContainer}>
-                <img className={styles.arrow} src="img/home/hero/hero_flecha.svg" alt="arrow-image"/>
+                <img className={styles.arrow} src="assets/img/hero/hero_flecha.svg" alt="arrow-image"/>
             </div>
         </div>
-        
-        <img className={styles.bottomBackground} src="img/home/generales/onda-04.svg" alt="background" /> */}
+        <div className={styles.bottomBackgroundContainer}>
+            <img className={styles.bottomBackground} src="assets/img/generales/onda-04.svg" alt="background" />
+        </div>
     
     </section>
   )
