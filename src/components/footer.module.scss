@@ -6,29 +6,62 @@
         @include mixin.flex-column-nowrap(center, center);
         background-color: var(--yellow);
         width: 100vw;
+        @media(min-width:992px){
+            @include mixin.flex-row-nowrap(center, center);
+            height: 370px;
+        }
         .mainLogo{
             width: 90px;
             height: 110px;
             margin: -60px 0 0 -57%;
             @media(min-width:425px){
-                margin: -60px 0 0 -67%;            }
+                margin: -60px 0 0 -67%;
+            }
+            @media(min-width:992px){
+                position: absolute;
+                margin: -185px 0 0 0;
+                width: max-content;
+                max-width: 171px;
+                left: 0.5%;
+            }
+            
         }
 
         .mainContent{
             @include mixin.flex-column-nowrap(center, center);
             width: 100%;
+            @media(min-width:992px){
+                width: 41%;
+                margin-top: 17px;
+            }
             .mainContentLogoContainer{
                 @include mixin.flex-column-nowrap(center, center);
                 width: 84%;
                 max-width: 269px;
+                @media(min-width:992px){
+                    width: 100%;
+                    max-width: 357px;
+                    height: 110px;
+                }
                 .logo{
                     @include mixin.flex-row-nowrap(center, flex-start);
                     width: 100%;
                     margin-bottom: 5px;
+                    @media(min-width:992px){
+                        height: 59px;
+                        border-radius: 30px;
+                        background-color: #fcfcfc;
+                        padding: 0 7%;
+                        width: 90%;
+                    }
 
                     .mainContentLogoImg{
                         margin-right: 0.95%;
                         height: 29px;
+                        @media(min-width:992px){
+                            width: 45px;
+                            height: 33px;
+                        }
                     }
                     .mainContentLogoTitle{
                         width: max-content;
@@ -44,6 +77,11 @@
                         color: #3c3c3c;
                         margin-top: 2%;
                         padding-left: 2%;
+                        @media(min-width:992px){
+                            width: 235px;
+                            height: 25px;
+                            line-height: 1.2rem;
+                        }
                     }
                 }
 
@@ -57,6 +95,12 @@
                     width: 229px;
                     height: 37px;            
                     align-self: center;
+                    @media(min-width:992px){
+                        line-height: 1.4rem;
+                        width: 76%;
+                        font-size: 1.05rem;
+                        text-align: left;
+                    }
                 }
 
             }
@@ -65,6 +109,9 @@
                 @include mixin.flex-row-nowrap(center, space-between);
                 width: 273px;
                 padding: 0;
+                @media(min-width:992px){
+                    margin: 20px 0;
+                }
                 .link{
                     text-decoration: none;
                     font-family: var(--noto-font);
@@ -79,6 +126,11 @@
         }
 
         .languageCourses{
+            
+            @media(min-width:992px){
+                width: 29%;
+                margin-top: 28px;
+            }
             .title{
                 font-family: var(--noto-font);
                 font-size: 1rem;
@@ -87,17 +139,34 @@
                 text-align: left;
                 color: var(--second-orange);
                 margin-bottom: 21px;
+                @media(min-width:992px){
+                    font-size: 1.3rem;
+                }
             }
             .contentContainer{
                 .content{
-                    @media(max-width:767px){
+                    @media(max-width:991px){
                         display: none;
                     }
+                    font-family: var(--noto-font);
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    line-height: 1.36rem;
+                    text-align: left;
+                    color: #707070;
+                    width: 100%;
+                    align-self: flex-start;
                 }
             }
         }
     
         .specialCourses{
+            
+            @media(min-width:992px){
+                width: 30%;
+                margin-top: 48px;
+            }
+
             .title{
                 font-family: var(--noto-font);
                 font-size: 1rem;
@@ -106,12 +175,27 @@
                 text-align: left;
                 color: var(--second-orange);
                 margin-bottom: 21px;
+                @media(min-width:992px){
+                    font-size: 1.3rem;
+                }
             }
     
             .contentContainer{
+
                 .content{
-                    @media(max-width:767px){
+                    @media(max-width:991px){
                         display: none;
+                    }
+                    font-family: var(--noto-font);
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    line-height: 1.36rem;
+                    text-align: left;
+                    color: #707070;
+                    width: 100%;
+                    align-self: flex-start;
+                    @media(min-width:1041px){
+                        max-width: 90%;
                     }
                 }
             }
@@ -128,12 +212,20 @@
         font-family: var(--noto-font);
         font-weight: 700;
         font-size: 0.813rem;
+        @media(min-width:992px){
+            @include mixin.flex-row-nowrap(center, space-between);
+            padding: 0 5%;
+        }
         .allRightsReserved{
             @include mixin.flex-column-nowrap(center, center);
             width: 90%;
             text-align: center;
             margin: 20px 0 15px 0;
             line-height: 1.9rem;
+            @media(min-width:992px){
+                width: max-content;
+                line-height: 1.5rem;
+            }
         }
         .socialMedia{
             @include mixin.flex-row-nowrap(center, space-between);
@@ -146,9 +238,19 @@
             @media(min-width:425px){
                 max-width: 192px;
             }
+            @media(min-width:992px){
+                margin-bottom: 0;
+                padding-left: 1%;
+            }
+            @media(min-width:1200px){
+                padding-left: 5%;
+            }
             .socialMediaIcon{
                 margin: 0 2%;
                 width: 35px;
+                @media(min-width:992px){
+                    margin: 0 8%;
+                }
             }
 
         }
@@ -156,6 +258,29 @@
             @media(max-width:767px){
                 display: none;
             }
+
+            @media(min-width:768px){
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;                
+                .privacy:first-child{
+                    padding: 0 3% 0 0;
+                }
+            }
+
+            @media(min-width:992px){
+                width: 29%;
+                margin-bottom: 0;
+                text-align: end;
+                .privacy:first-child{
+                    padding: 0 15% 0 0;
+                }
+
+            }
+
+
+
+
         }
     }
 
