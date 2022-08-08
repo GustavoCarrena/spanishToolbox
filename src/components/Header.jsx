@@ -7,6 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 export const Header = () => {
+  
   return (
     <Navbar fixed="top" expand="lg" className={styles.navBarContainer}>
       <Container fluid className={styles.contentContainer}>
