@@ -187,7 +187,12 @@
                 text-decoration: none;
                 font-family: var(--montserrat-font);
                 font-weight: 600;
-
+                &:hover{
+                    background-color: var(--blue-hover);
+                }
+                &:active{
+                    background-color: var(--blue-active);
+                }
             }
         }
 

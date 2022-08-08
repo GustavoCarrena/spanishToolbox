@@ -142,6 +142,12 @@
                 text-decoration: none;
                 padding: 13px 16px;
                 align-self: center;
+                &:hover{
+                background: var(--yellow-hover);
+                }
+                &:active{
+                background: var(--yellow-active);
+                }
             }
         }
 
@@ -296,6 +302,12 @@
                     color: var(--white);
                     text-decoration: none;
                     padding: 8px;
+                    &:hover{
+                    background-color: var(--second-orange-hover);
+                    }
+                    &:active{
+                    background-color: var(--second-orange-active);
+                    }
                     @media(min-width:768px){
                         justify-self: flex-end;
                         margin-bottom: 0;

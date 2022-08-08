@@ -195,4 +195,10 @@
         font-size: 14px;
         padding: 3px 8px;
     }
+    &:hover{
+        background-color: var(--second-orange-hover);
+    }
+    &:active{
+        background-color: var(--second-orange-active);
+    }
 }
