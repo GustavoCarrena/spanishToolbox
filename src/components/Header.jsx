@@ -63,7 +63,7 @@ export const Header = () => {
               className={`justify-content-end flex-grow-1 pe-3 ${styles.linksContainer}`}
               style={styles['.linksContainer']}
             >
-              <Nav.Link as={Link} to="/" eventKey="1" className={styles.links} style={styles['.links']} >
+              <Nav.Link as={Link} to="/language" eventKey="1" className={styles.links} style={styles['.links']} >
                 Language Courses
               </Nav.Link>
               <Nav.Link as={Link} to="/" eventKey="2" className={styles.links} style={styles['.links']}>
