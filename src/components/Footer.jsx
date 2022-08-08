@@ -13,10 +13,12 @@ export const Footer = () => {
             
             <div className={styles.mainContent}>
                 <div className={styles.mainContentLogoContainer}>
-                    <img className={styles.mainContentLogoImg} src="assets/img/logo/logo.svg" alt="logo"/>
-                    <span className={styles.mainContentLogoTitle}>The Spanish Toolbox</span>
-                </div>
+                    <div className={styles.logo}>
+                        <img className={styles.mainContentLogoImg} src="assets/img/logo/logo.svg" alt="logo"/>
+                        <span className={styles.mainContentLogoTitle}>The Spanish Toolbox</span>
+                    </div>
                     <p className={styles.mainContentLogoText}>We teach meaningful language, not language with meaning</p>
+                </div>
                 <ul className={styles.linkContainer}>
                     <Link className={styles.link} to={'/'}>About Us</Link>
                     <Link className={styles.link} to={'/'}>Contact Us</Link>
