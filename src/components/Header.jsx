@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import styles from "./header.module.scss";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -9,8 +9,8 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 export const Header = () => {
   
   return (
-    <Navbar fixed="top" expand="lg" className={styles.navBarContainer}>
-      <Container fluid className={styles.contentContainer}>
+    <Navbar collapseOnSelect fixed="top" expand="lg" className={styles.navBarContainer}>
+      <Container  fluid className={styles.contentContainer}>
         <Navbar.Brand as={Link} to="/" className={styles.logo}>
           <div className={styles.logoContainer}>
             <img
@@ -52,6 +52,7 @@ export const Header = () => {
                 <span 
                   className={styles.canvasLogotitle}
                   style={styles['.canvasLogotitle']}
+
                 >
                   The Spanish Toolbox
                 </span>
@@ -81,5 +82,5 @@ export const Header = () => {
       </Container>
         <button className={styles.contactButton}>Contact Us</button>
     </Navbar>
-  );
+    );
 };

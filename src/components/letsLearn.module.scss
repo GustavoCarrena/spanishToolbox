@@ -117,7 +117,7 @@
             }
             @media(min-width:767px){
                 width: 28%;
-                min-height: 446px;
+                min-height: 483px;
                 max-width: 350px;
             }
 
@@ -159,6 +159,15 @@
                 width: 90%;
                 height: 130px;
                 margin: 10px 0 10px 0;
+                @media(min-width:768px){
+                    margin: 10px 0 35px 0;
+                }
+                @media(min-width:850px){
+                    margin: 10px 0 20px 0;
+                }
+                @media(min-width:1020px){
+                    margin: 10px 0 10px 0;
+                }
                 .text{
                     text-align: center;
                     font-family: var(--montserrat-font);
