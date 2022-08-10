@@ -1,155 +1,170 @@
 @use "../../styles/mixins.scss"as mixin;
 
-.sectionContainer{
-    @include mixin.flex-column-nowrap(flex-start, center);
-    background-color: var(--violet);
-    color: #eee;
-    .rectangle{
-        @include mixin.flex-column-nowrap(initial, space-between);
-        border: none;
-        width: 36px;
-        height: 33px;
-        margin: 14px 0 0 33px;
-    }
-        .rectangleLines{
-            @include mixin.flex-row-nowrap(center, space-between);
-            .circle{
-                width: 6px;
-                height: 6px;
-                border: 1px solid var(--violet);
-                background: var(--white);
-                border-radius: 50%;
-            }
-        }
 
-    .titleContainer{
-        @include mixin.flex-column-nowrap(center, center);
-        margin-bottom: 50px;
+.generalContainer{
+    @include mixin.flex-column-nowrap(center, center);
+    width: 100vw !important;
+
+
+    .myImg{
+        margin-bottom: -1px;
+        max-width: 100%;
+    }
+
+    .sectionContainer{
+        @include mixin.flex-column-nowrap(flex-start, center);
+        background-color: var(--violet);
         color: #eee;
         width: 100%;
-        .title{
-            font-size: 1.9rem;
-            color: #eee;
-            font-family: var(--montserrat-font);
-            font-weight: 700;
-            line-height: 1.31rem;
-            text-align: center;
-            @media(min-width:768px){
-                font-size: 2.2rem;
+        .rectangle{
+            @include mixin.flex-column-nowrap(initial, space-between);
+            border: none;
+            width: 36px;
+            height: 33px;
+            margin: 14px 0 0 33px;
+        }
+            .rectangleLines{
+                @include mixin.flex-row-nowrap(center, space-between);
+                .circle{
+                    width: 6px;
+                    height: 6px;
+                    border: 1px solid var(--violet);
+                    background: var(--white);
+                    border-radius: 50%;
+                }
             }
-        }
-        .line{
-            width: 55px;
-            border-bottom: 1px solid #eee;
-            margin-top: 10px;
-        }
-    }
-    .main{
-        @include mixin.flex-column-nowrap(center, center);
-        width: 100%;
-        @media(min-width:768px){
-            @include mixin.flex-row-nowrap(center, space-between);
-            width: 90%;
-            align-self: center;
-        }
-        .card{
+    
+        .titleContainer{
             @include mixin.flex-column-nowrap(center, center);
-            width: 90%;
-            height: fit-content;
-            .firstImg{
-                padding-right: 33px;
-                width: 180px;
-                height: 120px;
+            margin-bottom: 50px;
+            color: #eee;
+            width: 100%;
+            .title{
+                font-size: 1.9rem;
+                color: #eee;
+                font-family: var(--montserrat-font);
+                font-weight: 700;
+                line-height: 1.31rem;
+                text-align: center;
+                @media(min-width:768px){
+                    font-size: 2.2rem;
+                }
             }
-            .secondImg{
-                width: 160px;
-                height: 100px;
+            .line{
+                width: 55px;
+                border-bottom: 1px solid #eee;
+                margin-top: 10px;
             }
-            .thirdImg{
-                padding-right: 11px;
-                width: 180px;
-                height: 120px;
+        }
+        .main{
+            @include mixin.flex-column-nowrap(center, center);
+            width: 100%;
+            @media(min-width:768px){
+                @include mixin.flex-row-nowrap(center, space-between);
+                width: 90%;
+                align-self: center;
             }
-            @media(min-width:600px){
+            .card{
+                @include mixin.flex-column-nowrap(center, center);
+                width: 90%;
+                height: fit-content;
                 .firstImg{
                     padding-right: 33px;
-                    width: 185px;
+                    width: 180px;
                     height: 120px;
                 }
                 .secondImg{
-                    width: 170px;
-                    height: 120px;
+                    width: 160px;
+                    height: 100px;
                 }
                 .thirdImg{
                     padding-right: 11px;
-                    width: 185px;
+                    width: 180px;
                     height: 120px;
                 }
-            }            
-            .cardTextContainer{
-                @include mixin.flex-column-nowrap(center, center);
-                text-align: center;
-                font-family: var(--montserrat-font);
-                font-weight: 600;
-                .cardTitle{
-                    font-size: 1.25rem;
-                    height: 10px;
-                    margin: 15px 0 24px 3%;
-                    line-height: 1.2rem;
-                    color: var(--white);
-                    font-weight: 800;
-                }
-                .cardText{
-                    font-size: 1rem;
-                    margin: 5px 7% 40px 7%;
-                    color: #eee;
-                    width: 80%;
-                    max-width: 350px;
-                    height: 119px;
+                @media(min-width:600px){
+                    .firstImg{
+                        padding-right: 33px;
+                        width: 185px;
+                        height: 120px;
+                    }
+                    .secondImg{
+                        width: 170px;
+                        height: 120px;
+                    }
+                    .thirdImg{
+                        padding-right: 11px;
+                        width: 185px;
+                        height: 120px;
+                    }
+                }            
+                .cardTextContainer{
+                    @include mixin.flex-column-nowrap(center, center);
+                    text-align: center;
+                    font-family: var(--montserrat-font);
                     font-weight: 600;
-                    @media(min-width:768px){
-                        margin: 5px 7% 40px 12%;
-                        font-size: 0.9rem;
+                    .cardTitle{
+                        font-size: 1.25rem;
+                        height: 10px;
+                        margin: 15px 0 24px 3%;
+                        line-height: 1.2rem;
+                        color: var(--white);
+                        font-weight: 800;
+                    }
+                    .cardText{
+                        font-size: 1rem;
+                        margin: 5px 7% 40px 7%;
+                        color: #eee;
+                        width: 80%;
+                        max-width: 350px;
+                        height: 119px;
+                        font-weight: 600;
+                        @media(min-width:768px){
+                            margin: 5px 7% 40px 12%;
+                            font-size: 0.9rem;
+                        }
                     }
                 }
             }
         }
-    }
-    .btnContainer{
-        width: 245px;
-        height: 50px;
-        margin: 0 0 50px 0;
-        align-self: center;
-        @media(min-width:768px){
-            width: 170px;
-            margin-left: 11px;
-        }
-        @media(min-width:1300px){
-            width: 190px;
-        }
-        .btn{
-            width: 100%;
-            height: 100%;
-            font-size: 1.3rem;
-            border-radius: 24px;
-            background-color: var(--yellow);
-            border: none;
-            text-align: center;
-            line-height: 1.375rem;
-            color: var(--blue);
-            font-family: var(--noto-font);
-            font-weight: 600;
-            padding: 14px 40px;
-            &:hover{
-            background-color: var(--yellow-hover);
-            }
-            &:active{
-            background-color: var(--yellow-active);
-            }
+        .btnContainer{
+            width: 245px;
+            height: 50px;
+            margin: 0 0 50px 0;
+            align-self: center;
             @media(min-width:768px){
-                font-size: 1.1rem;
-                padding: 10px 20px;            
+                width: 170px;
+                margin-left: 11px;
+            }
+            @media(min-width:1300px){
+                width: 190px;
+            }
+            .btn{
+                width: 100%;
+                height: 100%;
+                font-size: 1.3rem;
+                border-radius: 24px;
+                background-color: var(--yellow);
+                border: none;
+                text-align: center;
+                line-height: 1.375rem;
+                color: var(--blue);
+                font-family: var(--noto-font);
+                font-weight: 600;
+                padding: 14px 40px;
+                &:hover{
+                background-color: var(--yellow-hover);
+                }
+                &:active{
+                background-color: var(--yellow-active);
+                }
+                @media(min-width:768px){
+                    font-size: 1.1rem;
+                    padding: 10px 20px;            
+                }
             }
         }
     }
 }
+
+
