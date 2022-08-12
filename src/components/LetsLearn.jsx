@@ -42,7 +42,7 @@ export const LetsLearn = () => {
             <main className={styles.mainContainer}>
                 <div className={styles.cards}>
                     <div className={styles.imgContainer}>
-                        <img className={`${styles.firstCardImg} ${styles.img}`} src="/assets/img/fotos/AdobeStock_158540061.jpg" alt="photo"/>
+                        <img className={styles.img} src="/assets/img/fotos/AdobeStock_158540061.jpg" alt="photo"/>
                     </div>
                     <div className={styles.titleContainer}>
                         <h6 className={`${styles.firstCardTitle} ${styles.title}`}>REGULAR SPANISH COURSES</h6>
@@ -55,7 +55,7 @@ export const LetsLearn = () => {
                 </div>
                 <div className={styles.cards}>
                     <div className={styles.imgContainer}>
-                        <img className={`${styles.secondCardImg} ${styles.img}`} src="/assets/img/fotos/AdobeStock_220213829.jpg" alt="photo"/>
+                        <img className={styles.img} src="/assets/img/fotos/AdobeStock_220213829.jpg" alt="photo"/>
                     </div>
                     <div className={styles.titleContainer}>
                         <h6 className={`${styles.secondCardTitle} ${styles.title}`}>TAILOR MADE SPANISH COURSES</h6>
@@ -69,7 +69,7 @@ export const LetsLearn = () => {
                 </div>
                 <div className={styles.cards}>
                     <div className={styles.imgContainer}>
-                        <img className={`${styles.thirdCardImg} ${styles.img}`} src="/assets/img/fotos/clase-online.jpg" alt="photo"/>
+                        <img className={styles.img} src="/assets/img/fotos/clase-online.jpg" alt="photo"/>
                     </div>
                     <div className={styles.titleContainer}>
                         <h6 className={`${styles.thirdCardTitle}  ${styles.title}`}>CONVERSATIONS WORKSHOP</h6>

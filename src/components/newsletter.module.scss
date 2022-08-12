@@ -1,8 +1,17 @@
 @use "../../styles/mixins.scss"as mixin;
 
+.bottomBackgroundContainer{
+    margin-top: -1px;
+    width: 100vw;
+    .bottomBackground{
+        width: 100%
+    }
+}
+
 .sectionContainer{
     @include mixin.flex-column-nowrap(center, center);
     margin-bottom: 80px;
+    background-color: var(--white);
     .headerContent{
         @include mixin.flex-column-nowrap(center, center);
         width: 100vw;

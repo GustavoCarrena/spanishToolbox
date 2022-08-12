@@ -83,7 +83,7 @@
             .cards{
                 @include mixin.flex-column-nowrap(center, center);
                 width: 100%;
-                height: fit-content;
+                // height: fit-content;
                 max-width: 400px;
                 margin-bottom: 40px;
                 @media(min-width:500px){
@@ -135,7 +135,7 @@
                     @include mixin.flex-column-nowrap(center, center);
                     width: 100%;
                     max-width: 300px;
-                    height: fit-content;
+                    // height: fit-content;
                     margin-top: 10px;
                     @media(min-width:500px){
                         max-width: 320px;
@@ -186,7 +186,7 @@
                     .cardTextContainer{
                         @include mixin.flex-column-nowrap(center, flex-start);
                         width: 90%;
-                        height: fit-content;
+                        // height: fit-content;
                         @media(min-width:768px){
                             height: 200px;
                         }

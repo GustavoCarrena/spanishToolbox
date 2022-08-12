@@ -358,8 +358,9 @@
 
     .bottomBackgroundContainer{
         width: 100vw;
-        background: var(--white);
+
         .bottomBackground{
+            background: var(--white);
             width: 100%;
         }
     }

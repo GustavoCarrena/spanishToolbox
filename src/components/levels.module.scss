@@ -1,0 +1,154 @@
+@use "../../styles/mixins.scss"as mixin;
+
+
+.section {
+    background-color: var(--blue);
+    @include mixin.flex-column-nowrap(center, center);
+    margin-top: -10px;
+
+    .titleContainer {
+        @include mixin.flex-column-nowrap(center, center);
+
+        .title {
+            font-size: 1.9rem;
+            color: #eee;
+            font-family: var(--montserrat-font);
+            font-weight: 700;
+            line-height: 1.31rem;
+            text-align: center;
+        }
+
+        .line {
+            width: 55px;
+            border-bottom: 1px solid #eee;
+            margin-top: 10px;
+        }
+    }
+
+    .boxContainer {
+        @include mixin.flex-row-nowrap(center, space-between);
+        width: 100%;
+        margin: 18px 0 20px 0;
+        max-width: 256px;
+
+        .line {
+            position: absolute;
+            z-index: 1;
+            background-color: var(--yellow);
+            height: 5px;
+            width: 80%;
+            align-self: center;
+        }
+
+        .circlesContainer {
+            @include mixin.flex-row-nowrap(center, center);
+            width: 35px;
+            height: 35px;
+            z-index: 2;
+            .circles{
+                @include mixin.flex-row-nowrap(center, center);
+                background-color: var(--white);
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                font-family: var(--montserrat-font);
+                font-size: 0.8rem;
+                text-align: center;
+                font-weight: bold;
+            }
+            .circle1{
+                color: var(--violet);
+            }
+            .circle2{
+                color: var(--second-orange);
+            }
+            .circle3{
+                color: var(--violet);
+            }
+            .circle4{
+                color: var(--green);
+            }
+            .circle5{
+                color: var(--blue);
+            }
+            .circle6{
+                color: var(--yellow);
+            }
+        }
+    }
+
+    .textContainer{
+        @include mixin.flex-column-nowrap(center, center);
+        width: 90%;
+        height: 250px;
+        .largeTextContainer{
+            @include mixin.flex-column-nowrap(center, flex-start);
+            text-align: center;
+            height: 200px;
+            width: 100%;
+            font-family: var(--montserrat-font);
+            color: var(--white);
+
+            .titleLargeText{
+                width: 90%;
+                font-size: 0.8rem;
+                color: var(--white);
+                margin-bottom: 15px;
+                .level{
+                    color: var(--yellow);
+                }
+            }
+            .textLargeText{
+                width: 90%;
+                font-size: 0.6rem;
+                text-align: start;
+                font-weight: lighter;
+
+                .text{
+                    width: 100%;
+                    line-height: 8px;
+                    height: 30px;
+                }
+            }
+        }
+        .shortTextContainer{
+            @include mixin.flex-row-nowrap(center, center);
+            height: 200px;
+            width: 80%;
+            border-radius: 30px;
+            background-color: var(--white);
+            margin: 0 0 25px 0;
+            .circleShortTextContainer{
+                @include mixin.flex-row-nowrap(center, center);
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                left: 7%;
+                text-align: center;
+                
+
+                .circleShortText{
+                    @include mixin.flex-row-nowrap(center, center);
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: var(--yellow);
+                    font-family: var(--montserrat-font);
+                    font-size: 1rem;
+                    color: var(--white);
+                    
+                }
+            }
+            .textShortText{
+                width: 70%;
+                text-align: center;
+                font-family: var(--montserrat-font);
+                color: var(--violet);
+                font-style: italic;
+                font-size: 0.8rem;
+
+            }
+        }
+    }
+
+}

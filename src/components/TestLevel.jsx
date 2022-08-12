@@ -42,9 +42,9 @@ export const TestLevel = () => {
                 <img className={styles.arrow} src="assets/img/hero/hero_flecha.svg" alt="arrow-image"/>
             </div>
         </div>
-        <div className={styles.bottomBackgroundContainer}>
+        {/* <div className={styles.bottomBackgroundContainer}>
             <img className={styles.bottomBackground} src="assets/img/generales/onda-04.svg" alt="background" />
-        </div>
+        </div> */}
     
     </section>
   )

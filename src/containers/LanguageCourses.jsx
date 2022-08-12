@@ -1,10 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {LetsLearn} from '../components/LetsLearn.jsx';
+import { Levels } from '../components/Levels.jsx';
 import { WhyUs } from '../components/WhyUs.jsx';
+import {levelsText} from '../helpers/levelsText';
 import styles from './languageCourses.module.scss';
 
+
 export const LanguageCourses = () => {
+  
+  const texts = levelsText();
   
   const navigate = useNavigate();
   const handleToHome = () =>{
@@ -20,6 +25,13 @@ export const LanguageCourses = () => {
         </div>
         <LetsLearn/>
         <WhyUs/>
+        
+        {
+          texts.map(text => (
+            <Levels text={text} key={text.level}/>
+          ))
+
+        }
       </div>
     </section>
   )
