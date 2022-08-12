@@ -9,7 +9,7 @@ import styles from './languageCourses.module.scss';
 
 export const LanguageCourses = () => {
   
-  const texts = levelsText();
+  const text = levelsText();
   
   const navigate = useNavigate();
   const handleToHome = () =>{
@@ -25,13 +25,7 @@ export const LanguageCourses = () => {
         </div>
         <LetsLearn/>
         <WhyUs/>
-        
-        {
-          texts.map(text => (
-            <Levels text={text} key={text.level}/>
-          ))
-
-        }
+        <Levels text={text}/>
       </div>
     </section>
   )

@@ -29,7 +29,16 @@
         @include mixin.flex-row-nowrap(center, space-between);
         width: 100%;
         margin: 18px 0 20px 0;
-        max-width: 256px;
+        max-width: 260px;
+        @media(min-width:375px){
+            max-width: 325px;
+        }
+        @media(min-width:500px){
+            max-width: 430px;
+        }
+        @media(min-width:768px){
+            max-width: 600px;
+        }
 
         .line {
             position: absolute;
@@ -37,7 +46,20 @@
             background-color: var(--yellow);
             height: 5px;
             width: 80%;
+            max-width: 256px;
             align-self: center;
+            @media(min-width:375px){
+                width: 100%;
+                max-width: 325px;
+            }
+            @media(min-width:500px){
+                max-width: 430px;
+                height: 10px;
+            }
+            @media(min-width:768px){
+                max-width: 600px;
+            }
+
         }
 
         .circlesContainer {
@@ -45,6 +67,18 @@
             width: 35px;
             height: 35px;
             z-index: 2;
+            @media(min-width:375px){
+                width: 44px;
+                height: 44px;
+            }
+            @media(min-width:500px){
+                width: 60px;
+                height: 60px;
+            }
+            @media(min-width:500px){
+                width: 88px;
+                height: 88px;
+            }
             .circles{
                 @include mixin.flex-row-nowrap(center, center);
                 background-color: var(--white);
@@ -55,9 +89,33 @@
                 font-size: 0.8rem;
                 text-align: center;
                 font-weight: bold;
+                @media(min-width:500px){
+                    font-size: 1.1rem;
+                }
+                @media(min-width:768px){
+                    font-size: 1.6rem;
+                }
+
             }
             .circle1{
-                color: var(--violet);
+                @include mixin.flex-row-nowrap(center, center);
+                background-color: var(--yellow);
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                font-family: var(--montserrat-font);
+                font-size: 0.8rem;
+                text-align: center;
+                font-weight: bold;
+                color: var(--white);
+                @media(min-width:500px){
+                    font-size: 1.1rem;
+                }
+                @media(min-width:768px){
+                    font-size: 1.6rem;
+                }
+
+
             }
             .circle2{
                 color: var(--second-orange);
@@ -80,52 +138,142 @@
     .textContainer{
         @include mixin.flex-column-nowrap(center, center);
         width: 90%;
-        height: 250px;
+        height: 365px;
+        @media(min-width:375px){
+            height: auto;
+        }
+        @media(min-width:768px){
+            width: 79%;
+        }
         .largeTextContainer{
             @include mixin.flex-column-nowrap(center, flex-start);
             text-align: center;
-            height: 200px;
+            height: 300px;
             width: 100%;
             font-family: var(--montserrat-font);
             color: var(--white);
-
+            @media(min-width:375px){
+                height: 250px;
+            }
+            @media(min-width:500px){
+                height: 270px;
+            }
+            @media(min-width:768px){
+                height: 225px;
+            }
             .titleLargeText{
-                width: 90%;
+                width: 77%;
+                height: 39px;
                 font-size: 0.8rem;
                 color: var(--white);
                 margin-bottom: 15px;
+                text-align:center;
+                @media(min-width:375px){
+                    width: 94%;
+                    max-width: 318px;
+                    margin-bottom: 12px;
+                    text-align: start;
+                    font-size: 0.85rem;
+                }
+                @media(min-width:500px){
+                    max-width: 416px;
+                    margin-bottom: 16px;
+                    font-size: 1.1rem;
+                }
+                @media(min-width:768px){
+                    max-width: 570px;
+                    margin-bottom: 16px;
+                    font-size: 1.1rem;
+                }
+
                 .level{
                     color: var(--yellow);
                 }
             }
             .textLargeText{
                 width: 90%;
+                height: 142px;
                 font-size: 0.6rem;
                 text-align: start;
                 font-weight: lighter;
+                @media(min-width:375px){
+                    width: 100%;
+                    height: 317px;
+                    max-width: 317px;
+                    font-size: 0.75rem;
+                }
+                @media(min-width:500px){
+                    height: 317px;
+                    max-width: 416px;
+                    font-size: 0.9rem;
+                }
+                @media(min-width:768px){
+                    max-width: 570px;
+                    height: 215px;
+                }
 
                 .text{
                     width: 100%;
-                    line-height: 8px;
-                    height: 30px;
+                    line-height: 0.8rem;
+                    height: 57px;
+                    margin-bottom: 7px;
+                    @media(min-width:375px){
+                        font-size: 0.85rem;
+                        height: auto;
+                        max-height: 76px;
+                        line-height: 0.9rem;
+                        margin-bottom: 17px;
+                    }
+                    @media(min-width:500px){
+                        font-size: unset;
+                        line-height: 1.1rem;
+
+                    }
+                    
                 }
             }
         }
         .shortTextContainer{
             @include mixin.flex-row-nowrap(center, center);
-            height: 200px;
-            width: 80%;
+            height: 180px;
+            width: 90%;
             border-radius: 30px;
             background-color: var(--white);
             margin: 0 0 25px 0;
+            @media(min-width:375px){
+                max-width: 345px;
+            }
+            @media(min-width:500px){
+                max-width: 425px;
+                width: 95%;
+            }
+            @media(min-width:768px){
+                max-width: 485px;
+            }
+
             .circleShortTextContainer{
                 @include mixin.flex-row-nowrap(center, center);
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
                 position: absolute;
-                left: 7%;
+                left: 2%;
                 text-align: center;
-                
+                @media(min-width:500px){
+                    width: 70px;
+                    height: 70px;
+                }
+                @media(min-width:560px){
+                    left: 5%;
+                }
+                @media(min-width:590px){
+                    left: 8%;
+                }
+                @media(min-width:650px){
+                    left: 12%;
+                }
+                @media(min-width:700px){
+                    left: 15%;
+                }
 
                 .circleShortText{
                     @include mixin.flex-row-nowrap(center, center);
@@ -136,16 +284,29 @@
                     font-family: var(--montserrat-font);
                     font-size: 1rem;
                     color: var(--white);
+                    @media(min-width:500px){
+                        font-size: 1.3rem;
+                    }
                     
                 }
             }
             .textShortText{
                 width: 70%;
-                text-align: center;
+                text-align: start;
                 font-family: var(--montserrat-font);
                 color: var(--violet);
                 font-style: italic;
                 font-size: 0.8rem;
+                @media(min-width:375px){
+                    @include mixin.flex-row-nowrap(center, flex-start);
+                    width: 80%;
+                    height: 90%;
+                    font-size: 0.9rem;
+                }
+                @media(min-width:500px){
+                    width: 78%;
+                    font-size: 1rem;
+                }
 
             }
         }

@@ -1,35 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLevels } from '../hooks/useLevels';
 import styles from './levels.module.scss';
 
 export const Levels = ({text}) => {
-    
-       
-    // const finding = text.map(p=>p).find(p=>p.level === "A1");
-    
-    // console.log(finding);
 
-    // const finding = () => {
-    //     const p = text.map(p=>p)
-    // //    const p = text.map(p=>p).find(p=> p.level === level).title
-    // //    const titles = p.find(p=> p.level === level).title
-    //    return p;
-    // };
-
-    // const handlep = (level) =>{
-
-    // }
-
-    // console.log(finding("A2")); 
-    
-  
-
-    // console.log(filtered.filter('A1'));
-
-
+    const { levels,titles,text1,text2,text3,text4,handle, level} = useLevels(text)
       
     return (
-
-
 
             <section className={styles.section}>
         
@@ -41,39 +18,39 @@ export const Levels = ({text}) => {
             <div className={styles.boxContainer}>
                 <div className={styles.line}></div>
                     <div  className={styles.circlesContainer}>
-                        <div className={`${styles.circles} ${styles.circle1}`}>A1</div>
+                        <div onClick={handle.A1} className={`${styles.circles} ${styles.circle1}`}>A1</div>
                     </div>
                     <div className={styles.circlesContainer}>
-                        <div className={`${styles.circles} ${styles.circle2}`}>A2</div>
+                        <div onClick={handle.A2} className={(level === 'A2' ||level === 'B1' ||level === 'B2' ||level === 'C1' ||level === 'C2') ? styles.circle1 : `${styles.circles} ${styles.circle2}`}>A2</div>
                     </div>
                     <div className={styles.circlesContainer}>
-                        <div className={`${styles.circles} ${styles.circle3}`}>B1</div>
+                        <div onClick={handle.B1} className={(level === 'B1' || level === 'B2' || level === 'C1' || level === 'C2') ? styles.circle1 : `${styles.circles} ${styles.circle3}`}>B1</div>
                     </div>
                     <div className={styles.circlesContainer}>
-                        <div className={`${styles.circles} ${styles.circle4}`}>B2</div>
+                        <div onClick={handle.B2} className={(level === 'B2' || level === 'C1' || level === 'C2') ? styles.circle1 :`${styles.circles} ${styles.circle4}`}>B2</div>
                     </div>
                     <div className={styles.circlesContainer}>
-                        <div className={`${styles.circles} ${styles.circle5}`}>C1</div>
+                        <div onClick={handle.C1} className={(level === 'C1' || level === 'C2') ? styles.circle1 :`${styles.circles} ${styles.circle5}`}>C1</div>
                     </div>
                     <div className={styles.circlesContainer}>
-                        <div className={`${styles.circles} ${styles.circle6}`}>C2</div>
+                        <div onClick={handle.C2} className={(level === 'C2') ? styles.circle1 :`${styles.circles} ${styles.circle6}`}>C2</div>
                     </div>
             </div>
     
             <div className={styles.textContainer}>
             <div className={styles.largeTextContainer}>
-                <div className={styles.titleLargeText}><span className={styles.level}>{text.level}</span>{text.title}</div>
+                <div className={styles.titleLargeText}><span className={styles.level}>{levels} - </span>{titles}</div>
                 <div className={styles.textLargeText}>
-                    <div className={styles.text}>{text.text1}</div>
-                    <div className={styles.text}>{text.text2}</div>
-                    <div className={styles.text}>{text.text3}</div>
+                    <div className={styles.text}>{text1}</div>
+                    <div className={styles.text}>{text2}</div>
+                    <div className={styles.text}>{text3}</div>
                 </div>
             </div>
             <div className={styles.shortTextContainer}>
                 <div className={styles.circleShortTextContainer}>
-                    <div className={styles.circleShortText}><span>{text.level}</span></div>
+                    <div className={styles.circleShortText}><span>{levels}</span></div>
                 </div>
-                <div className={styles.textShortText}>{text.text4}</div>
+                <div className={styles.textShortText}>{text4}</div>
             </div>
         </div>
     
