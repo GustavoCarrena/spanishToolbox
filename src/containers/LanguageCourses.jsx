@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {LetsLearn} from '../components/LetsLearn.jsx';
 import { Levels } from '../components/Levels.jsx';
+import { TestLevel } from '../components/TestLevel.jsx';
 import { WhyUs } from '../components/WhyUs.jsx';
 import {levelsText} from '../helpers/levelsText';
 import styles from './languageCourses.module.scss';
@@ -26,6 +27,7 @@ export const LanguageCourses = () => {
         <LetsLearn/>
         <WhyUs/>
         <Levels text={text}/>
+        <TestLevel/>
       </div>
     </section>
   )
