@@ -187,7 +187,7 @@
     .textContainer{
         @include mixin.flex-column-nowrap(center, center);
         width: 95%;
-        height: 365px;
+        height: 413px;
         @media(min-width:375px){
             height: auto;
         }
@@ -260,8 +260,8 @@
             }
             .textLargeText{
                 width: 90%;
-                height: 142px;
-                font-size: 0.6rem;
+                height: 100%;
+                font-size: 0.8rem;
                 text-align: start;
                 font-weight: lighter;
                 @media(min-width:375px){
@@ -284,7 +284,7 @@
                     width: 100%;
                     line-height: 0.8rem;
                     height: auto;
-                    max-height: 57px;
+                    max-height: 70px;
                     min-height: max-content;
                     margin-bottom: 7px;
                     @media(min-width:375px){
