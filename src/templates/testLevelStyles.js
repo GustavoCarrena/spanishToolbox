@@ -11,13 +11,20 @@ display:${props => (props.pathlocation === 'language' ? 'none !important' : '')}
 
 const mytestcontainer = styled.div`
 position:${props => (props.pathlocation === 'language' ? 'relative' : '')};
-top:${props => (props.pathlocation === 'language' ? '130px !important' : '')};
+top:${props => (props.pathlocation === 'language' ? '97px !important' : '')};
 
 @media(min-width:750px){
     max-width:${props => (props.pathlocation === 'language' ? '230px !important' : '')};
     position:${props => (props.pathlocation === 'language' ? 'relative' : '')};
     top:${props => (props.pathlocation === 'language' ? '0px !important' : '')};
     right:${props => (props.pathlocation === 'language' ? '-23%' : '')};
+}
+@media(min-width:768px){
+    height:${props => (props.pathlocation === 'language' ? '283px !important' : '')};
+    margin-top:${props => (props.pathlocation === 'language' ? '118px !important' : '')};
+}
+@media(min-width:1024px){
+    height:${props => (props.pathlocation === 'language' ? '400px !important' : '')};
 }
 `
 
@@ -29,7 +36,7 @@ margin:${props => (props.pathlocation === 'language' ? '30px 0' : '')};
     height:${props => (props.pathlocation === 'language' ? '295px !important' : '')};
 }
 @media(min-width:768px){
-    margin:${props => (props.pathlocation === 'language' ? '166px 8% 32px 0px' : '')};
+    margin:${props => (props.pathlocation === 'language' ? '0 8% 0 0 !important' : '')};
     height:${props => (props.pathlocation === 'language' ? '295px !important' : '')};
 }
 @media(min-width:1024px){
@@ -38,7 +45,12 @@ margin:${props => (props.pathlocation === 'language' ? '30px 0' : '')};
 `
 
 const myTextYourLevelText = styled.p`
+@media(max-width:767px){
+    display:${props => (props.pathlocation === 'language' ? 'none !important' : '')};
+}
+
 @media(min-width:768px){
+    display:${props => (props.pathlocation === 'language' ? 'block !important' : '')};
     font-size:${props => (props.pathlocation === 'language' ? '0.65rem !important' : '')};
     margin-bottom:${props => (props.pathlocation === 'language' ? '15px !important' : '')};
     width:${props => (props.pathlocation === 'language' ? '95% !important' : '')};
@@ -56,6 +68,10 @@ background-position:${props => (props.pathlocation === 'language' ? 'center cent
 background-size:${props => (props.pathlocation === 'language' ? 'cover !important' : '')};
 width:${props => (props.pathlocation === 'language' ? '100vw !important' : '')};
 display: ${props => (props.pathlocation === 'language' ? 'flex !important' : '')};
+height:${props => (props.pathlocation === 'language' ? '320px !important' : '')};
+@media(min-width:768px){
+    height:${props => (props.pathlocation === 'language' ? '517px !important' : '')};
+};
 @media(min-width:1024px){
     height:${props => (props.pathlocation === 'language' ? '681px !important' : '')};
 };
@@ -63,7 +79,7 @@ display: ${props => (props.pathlocation === 'language' ? 'flex !important' : '')
 
 const mytitlecontainer = styled.div`
 @media(min-width:1024px){
-    widht:${props => (props.pathlocation === 'language' ? '260px !important' : '')};
+    width:${props => (props.pathlocation === 'language' ? '260px !important' : '')};
 };
 `
 
@@ -84,13 +100,20 @@ const myarrowcontainer = styled.div`
     margin-top:${props => (props.pathlocation === 'language' ? '56px !important' : '')};
 }
 @media(min-width:1024px){
-    right:${props => (props.pathlocation === 'language' ? '13% !important' : '')};
+    right:${props => (props.pathlocation === 'language' ? '9% !important' : '')};
+    margin-top:${props => (props.pathlocation === 'language' ? '90px !important' : '')};
+}
+@media(min-width:1100px){
+    right:${props => (props.pathlocation === 'language' ? '10% !important' : '')};
+}
+@media(min-width:1200px){
+    right:${props => (props.pathlocation === 'language' ? '12% !important' : '')};
 }
 @media(min-width:1326px){
-    right:${props => (props.pathlocation === 'language' ? '15% !important' : '')};
+    right:${props => (props.pathlocation === 'language' ? '13% !important' : '')};
 }
 @media(min-width:1440px){
-    right:${props => (props.pathlocation === 'language' ? '16% !important' : '')};
+    right:${props => (props.pathlocation === 'language' ? '14% !important' : '')};
 }
 
 `
