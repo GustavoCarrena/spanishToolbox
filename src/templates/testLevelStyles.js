@@ -72,8 +72,17 @@ height:${props => (props.pathlocation === 'language' ? '320px !important' : '')}
 @media(min-width:768px){
     height:${props => (props.pathlocation === 'language' ? '517px !important' : '')};
 };
-@media(min-width:1024px){
+@media(min-width:880px){
+    height:${props => (props.pathlocation === 'language' ? '580px !important' : '')};
+};
+@media(min-width:940px){
     height:${props => (props.pathlocation === 'language' ? '681px !important' : '')};
+};
+@media(min-width:1050px){
+    height:${props => (props.pathlocation === 'language' ? '740px !important' : '')};
+};
+@media(min-width:1200px){
+    height:${props => (props.pathlocation === 'language' ? '974px !important' : '')};
 };
 `
 
