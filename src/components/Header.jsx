@@ -67,8 +67,8 @@ export const Header = () => {
               <Nav.Link as={Link} to="/language" eventKey="1" className={styles.links} style={styles['.links']} >
                 Language Courses
               </Nav.Link>
-              <Nav.Link as={Link} to="/" eventKey="2" className={styles.links} style={styles['.links']}>
-                Special Courses
+              <Nav.Link as={Link} to="/ondemand" eventKey="2" className={styles.links} style={styles['.links']}>
+                On-Demand Courses
               </Nav.Link>
               <Nav.Link as={Link} to="/" eventKey="3" className={styles.links} style={styles['.links']}>
                 About Us

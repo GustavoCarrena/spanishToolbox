@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { EnrollNow } from '../components/EnrollNow.jsx';
 import {LetsLearn} from '../components/LetsLearn.jsx';
 import { Levels } from '../components/Levels.jsx';
 import { TestLevel } from '../components/TestLevel.jsx';
@@ -28,6 +29,7 @@ export const LanguageCourses = () => {
         <WhyUs/>
         <Levels text={text}/>
         <TestLevel/>
+        <EnrollNow/>
       </div>
     </section>
   )

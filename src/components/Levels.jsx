@@ -54,7 +54,7 @@ export const Levels = ({text}) => {
             </div>
         </div>
     
-                    </section>
+    </section>
       
 
 
