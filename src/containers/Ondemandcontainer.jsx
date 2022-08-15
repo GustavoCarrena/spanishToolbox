@@ -6,7 +6,7 @@ import { WhyUs } from '../components/WhyUs';
 import styles from './ondemandCoursesContainer.module.scss';
 
 
-export const OnDemandCoursesContainer = () => {
+export const Ondemandcontainer = () => {
   
   const navigate = useNavigate();
   
