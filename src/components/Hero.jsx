@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { useWindowDimensions } from "../hooks/useWindowDimensions";
 import styles from "./hero.module.scss";
 

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {usePath} from "../hooks/usePath";
+import {useScroll} from '../hooks/useScroll.js';
 import {Myimg, Myh1, Myh1Language, TextContainer, TextContainerShort ,FirstTitle, SecondTitle, ThirdTitle, SecondButton, ThirdButton} from "../templates/letsLearnStyles";
 import {firstCard,secondCard,thirdCard,changeSectionTitle, changeCardImg, changeCardTitle, changeCardText} from '../helpers/letsLearnText';
 import styles from './letsLearn.module.scss';
@@ -8,7 +9,12 @@ import styles from './letsLearn.module.scss';
 
 export const LetsLearn = () => {
     
+    // const [executeScroll, elRef] = useScroll();
+    
+    // useEffect(executeScroll, [])
+    
     const screen = usePath();
+
     
     const navigate = useNavigate();
     const handleNavigate = (route) =>{
@@ -17,7 +23,6 @@ export const LetsLearn = () => {
 
 
     return (
-    
         <section className={styles.letsLearnContainer}>
             
             <Myimg pathlocation={screen} className={styles.greenCircle} src="assets/img/hero/hero-_circ-verde.svg" alt="green circle"/>

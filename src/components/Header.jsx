@@ -1,19 +1,26 @@
-import React from "react";
+import React from 'react';
 import { Link} from "react-router-dom";
-import {scrollUp} from '../helpers/scrollUp';
 import styles from "./header.module.scss";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { animateScroll as scroll} from 'react-scroll';
+
 
 export const Header = () => {
-  
+
+ const onClickUp = () => {
+    scroll.scrollToTop();
+
+ }
+
   return (
-    <Navbar id="top" collapseOnSelect fixed="top" expand="lg" className={styles.navBarContainer}>
+    <>
+    <Navbar collapseOnSelect fixed="top" expand="lg" className={styles.navBarContainer}>
       <Container  fluid className={styles.contentContainer}>
         <Navbar.Brand as={Link} to="/" className={styles.logo}>
-          <div className={styles.logoContainer}>
+          <div onClick={onClickUp} className={styles.logoContainer}>
             <img
               src="/assets/img/logo/logo.svg"
               alt="logo"
@@ -65,16 +72,16 @@ export const Header = () => {
               className={`justify-content-end flex-grow-1 pe-3 ${styles.linksContainer}`}
               style={styles['.linksContainer']}
             >
-              <Nav.Link as={Link} to="/language" onClick={scrollUp} eventKey="1" className={styles.links} style={styles['.links']} >
+              <Nav.Link as={Link} to="/language" smooth={true} duration={0} onClick={onClickUp} eventKey="1" className={styles.links} style={styles['.links']} >
                 Language Courses
               </Nav.Link>
-              <Nav.Link as={Link} to="/ondemand" onClick={scrollUp} eventKey="2" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/ondemand" smooth={true} duration={0} onClick={onClickUp} eventKey="2" className={styles.links} style={styles['.links']}>
                 On-Demand Courses
               </Nav.Link>
-              <Nav.Link as={Link} to="/" onClick={scrollUp} eventKey="3" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/" smooth={true} duration={0} onClick={onClickUp} eventKey="3" className={styles.links} style={styles['.links']}>
                 About Us
               </Nav.Link>
-              <Nav.Link as={Link} to="/" onClick={scrollUp} eventKey="4" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/" smooth={true} duration={0} onClick={onClickUp} eventKey="4" className={styles.links} style={styles['.links']}>
                 Contact
               </Nav.Link>
             </Nav>
@@ -83,5 +90,6 @@ export const Header = () => {
       </Container>
         <button className={styles.contactButton}>Contact Us</button>
     </Navbar>
+    </>
     );
 };
