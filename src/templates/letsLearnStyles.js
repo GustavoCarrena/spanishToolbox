@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 const myimg = styled.img`
-display:${props => (props.pathlocation === 'language' || 'ondemand') ? 'none' : ''};
+display:${props => (props.pathlocation === 'language' || props.pathlocation === 'ondemand') ? 'none' : ''};
 `
 const myh1 = styled.h1`
-display:${props => (props.pathlocation === 'language'|| 'ondemand') ? 'none !important' : ''}
+display:${props => props.pathlocation === 'language' || props.pathlocation === 'ondemand' ? 'none !important' : ''}
 `
 
 const myh1Language = styled.h1`
-    display:${props => (props.pathlocation === 'language' || 'ondemand') ? 'flex !important' : 'none !important'};
+    display:${props => (props.pathlocation === 'language' || props.pathlocation === 'ondemand') ? 'flex !important' : 'none !important'};
     width: 100vw;
     flex-flow: column nowrap;
     align-items: center;
@@ -73,6 +73,11 @@ const textContainer = styled.div`
 }
 `
 const textContainerShort = styled.div`
+@media(max-width:767px){
+    margin:${props => props.pathlocation === 'ondemand' ? '10px 0 0 0 !important' : ''}
+}
+`
+const cards = styled.div`
 @media(max-width:767px){
     margin:${props => props.pathlocation === 'ondemand' ? '10px 0 0 0 !important' : ''}
 }
