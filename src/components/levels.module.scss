@@ -5,10 +5,6 @@
     background-color: var(--blue);
     @include mixin.flex-column-nowrap(center, center);
     margin-top: -10px;
-    @media(min-width:992px){
-        align-items: flex-start;
-        padding-left: 6%;
-    }
 
     .titleContainer {
         @include mixin.flex-column-nowrap(center, center);

@@ -30,7 +30,7 @@ const myh1Language = styled.h1`
         
         .title{
             width: 90%;
-            max-width: 257px;
+            max-width: 297px;
                 @media(min-width: 420px){
                     max-width: 315px;
                 }
@@ -67,6 +67,16 @@ const thirdButton = styled.button`
 background-color:${props => props.pathlocation === 'ondemand' ? 'var(--green) !important' : ''}
 `
 
+const textContainer = styled.div`
+@media(max-width:767px){
+    margin:${props => props.pathlocation === 'ondemand' ? '10px 0 33px 0 !important' : ''}
+}
+`
+const textContainerShort = styled.div`
+@media(max-width:767px){
+    margin:${props => props.pathlocation === 'ondemand' ? '10px 0 0 0 !important' : ''}
+}
+`
 export const Myimg = myimg;
 export const Myh1 = myh1;
 export const Myh1Language = myh1Language;
@@ -75,6 +85,6 @@ export const SecondTitle = secondTitle;
 export const ThirdTitle = thirdTitle;
 export const SecondButton = secondButton;
 export const ThirdButton = thirdButton;
-
-
+export const TextContainer = textContainer;
+export const TextContainerShort = textContainerShort;
 

@@ -92,7 +92,7 @@
 
     .mainContainer{
         @include mixin.flex-column-nowrap(center, center);
-        @media(min-width:767px){
+        @media(min-width:768px){
             @include mixin.flex-row-nowrap(center, space-around);
         }
         .cards{
@@ -115,9 +115,9 @@
             @media(min-width:425px){
                 max-width: 380px;
             }
-            @media(min-width:767px){
-                width: 28%;
-                min-height: 483px;
+            @media(min-width:768px){
+                width: 31%;
+                min-height: 450px;
                 max-width: 350px;
             }
 

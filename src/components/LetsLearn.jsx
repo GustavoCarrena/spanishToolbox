@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {usePath} from "../hooks/usePath";
-import {Myimg, Myh1, Myh1Language, FirstTitle, SecondTitle, ThirdTitle, SecondButton, ThirdButton} from "../templates/letsLearnStyles";
+import {Myimg, Myh1, Myh1Language, TextContainer, TextContainerShort ,FirstTitle, SecondTitle, ThirdTitle, SecondButton, ThirdButton} from "../templates/letsLearnStyles";
 import {firstCard,secondCard,thirdCard,changeSectionTitle, changeCardImg, changeCardTitle, changeCardText} from '../helpers/letsLearnText';
 import styles from './letsLearn.module.scss';
 
@@ -46,9 +46,9 @@ export const LetsLearn = () => {
                         <FirstTitle pathlocation={screen}  className={`${styles.firstCardTitle} ${styles.title}`}>{changeCardTitle(screen, firstCard)}</FirstTitle>
                     </div>
                     
-                    <div className={styles.textContainer}>
+                    <TextContainerShort pathlocation={screen} className={styles.textContainer}>
                         <p className={`${styles.firstCardText} ${styles.text}`}>{changeCardText(screen, firstCard)}</p>
-                    </div>
+                    </TextContainerShort>
                     <button className={`${styles.firstCardButton} ${styles.btn}`} onClick={() => handleNavigate('/')}>Read More</button>
                 </div>
                 <div className={styles.cards}>
@@ -58,9 +58,9 @@ export const LetsLearn = () => {
                     <div className={styles.titleContainer}>
                         <SecondTitle pathlocation={screen} className={`${styles.secondCardTitle} ${styles.title}`}>{changeCardTitle(screen, secondCard)}</SecondTitle>
                     </div>
-                    <div className={styles.textContainer}>
+                    <TextContainerShort pathlocation={screen} className={styles.textContainer}>
                         <p className={`${styles.secondCardText} ${styles.text}`}>{changeCardText(screen, firstCard)}</p>
-                    </div>
+                    </TextContainerShort>
                     <SecondButton pathlocation={screen} className={`${styles.secondCardButton} ${styles.btn}`} onClick={() => handleNavigate('/')}>Read More</SecondButton>
                 </div>
                 <div className={styles.cards}>
@@ -70,9 +70,9 @@ export const LetsLearn = () => {
                     <div className={styles.titleContainer}>
                         <ThirdTitle pathlocation={screen} className={`${styles.thirdCardTitle}  ${styles.title}`}>{changeCardTitle(screen, thirdCard)}</ThirdTitle>
                     </div>
-                    <div className={styles.textContainer}>
+                    <TextContainer pathlocation={screen} className={styles.textContainer}>
                         <p className={`${styles.thirdCardText} ${styles.text}`}>{changeCardText(screen, thirdCard)}</p>
-                    </div>
+                    </TextContainer>
                     <ThirdButton pathlocation={screen} className={`${styles.thirdCardButton} ${styles.btn}`} onClick={() => handleNavigate('/')}>Read More</ThirdButton>
                 </div>
                 <Myimg pathlocation={screen} className={styles.yellowCircle} src="assets/img/hero/hero-circ-amarillo.svg" alt="circle image"/>
