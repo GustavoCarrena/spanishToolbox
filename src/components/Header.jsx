@@ -72,16 +72,16 @@ export const Header = () => {
               className={`justify-content-end flex-grow-1 pe-3 ${styles.linksContainer}`}
               style={styles['.linksContainer']}
             >
-              <Nav.Link as={Link} to="/language" smooth={true} duration={0} onClick={onClickUp} eventKey="1" className={styles.links} style={styles['.links']} >
+              <Nav.Link as={Link} to="/language" smooth='true' duration={100} onClick={onClickUp} eventKey="1" className={styles.links} style={styles['.links']} >
                 Language Courses
               </Nav.Link>
-              <Nav.Link as={Link} to="/ondemand" smooth={true} duration={0} onClick={onClickUp} eventKey="2" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/ondemand" smooth='true' duration={100} onClick={onClickUp} eventKey="2" className={styles.links} style={styles['.links']}>
                 On-Demand Courses
               </Nav.Link>
-              <Nav.Link as={Link} to="/" smooth={true} duration={0} onClick={onClickUp} eventKey="3" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/" smooth='true' duration={100} onClick={onClickUp} eventKey="3" className={styles.links} style={styles['.links']}>
                 About Us
               </Nav.Link>
-              <Nav.Link as={Link} to="/" smooth={true} duration={0} onClick={onClickUp} eventKey="4" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/" smooth='true' duration={100} onClick={onClickUp} eventKey="4" className={styles.links} style={styles['.links']}>
                 Contact
               </Nav.Link>
             </Nav>

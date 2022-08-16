@@ -7,14 +7,17 @@ export const Hero = () => {
   const { width } = useWindowDimensions();
 
   return (
+
     <section className={styles.heroContainer}>
       <div className={styles.leftBookcaseContainer}>
+
         <img
           className={styles.leftBookcaseImg}
           id="leftBookcase" 
           src="/assets/img/hero/hero_biblio-1-ss.svg"
           alt="bookcase"
         />
+
       </div>
 
 
@@ -78,5 +81,7 @@ export const Hero = () => {
     <img src="/assets/img/hero/hero_circ-violeta.svg" alt="circle image" className={styles.violetCircle}/>
 
   </section>
+
+
   );
 };
