@@ -55,7 +55,7 @@ export const LetsLearn = () => {
                         <SecondTitle pathlocation={screen} className={`${styles.secondCardTitle} ${styles.title}`}>{changeCardTitle(screen, secondCard)}</SecondTitle>
                     </div>
                     <TextContainerShort pathlocation={screen} className={styles.textContainer}>
-                        <p className={`${styles.secondCardText} ${styles.text}`}>{changeCardText(screen, firstCard)}</p>
+                        <p className={`${styles.secondCardText} ${styles.text}`}>{changeCardText(screen, secondCard)}</p>
                     </TextContainerShort>
                     <SecondButton pathlocation={screen} className={`${styles.secondCardButton} ${styles.btn}`} onClick={() => handleNavigate('/')}>Read More</SecondButton>
                 </div>
