@@ -1,40 +1,39 @@
 import React, { useState, useEffect } from "react";
 import {usePath} from "./usePath";
+import styles from '../components/letsLearn.module.scss';
 
 export const useSetContents = () => {
     
-    const [enrollNowContent, setEnrollNowContent] = useState('');
-    const [displayGreenCircle, setDisplayGreenCircle] = useState(null);
-    const [srcGreenCircle, setSrcGreenCircle] = useState(null);
+    const [enrollTextBtn, setEnrollTextBtn] = useState('');
+    const [displayGreenCircle, setdisplayGreenCircle] = useState(null);
+
     const screen = usePath();
-    
 
     useEffect(()=>{
-
+        
         switch (screen) {
             
-            case (''):
-                setSrcGreenCircle("assets/img/hero/hero-_circ-verde.svg");
-                setDisplayGreenCircle(styles.greenCircle);
-                break
-            
-            case 'language':
-                setDisplayGreenCircle(styles.greenCircleNone);
+            case '':
+                setdisplayGreenCircle(styles.greenCircle);
                 break;
-            
+
             case 'ondemand':
-                setEnrollNowContent('Enroll Now');
-                setDisplayGreenCircle(styles.greenCircleNone);
+                setEnrollTextBtn('Enroll Now');
+                setdisplayGreenCircle(styles.greenCircleNone);
                 break;
-        
-                case 'about':
-                    setEnrollNowContent('Contact Us')
+
+            case 'language':
+                setdisplayGreenCircle(styles.greenCircleNone);
+                break;
+
+            case 'about':
+                setEnrollTextBtn('Contact Us');
                 break;
         }
+        
+        },[screen])
+        
+        return {screen, enrollTextBtn, displayGreenCircle};
 
-    },[screen])
-
-
-    return {screen,enrollNowContent,displayGreenCircle, srcGreenCircle};
 
 }

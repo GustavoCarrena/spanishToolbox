@@ -1,46 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import {usePath} from "../hooks/usePath";
 import {Myimg,Myh1, Myh1Language, TextContainer, TextContainerShort ,FirstTitle, SecondTitle, ThirdTitle, SecondButton, ThirdButton} from "../templates/letsLearnStyles";
 import {firstCard,secondCard,thirdCard,changeSectionTitle, changeCardImg, changeCardTitle, changeCardText} from '../helpers/letsLearnText';
+import {useSetContents} from "../hooks/useSetContents";
 import styles from './letsLearn.module.scss';
-// import {displayGreenCircle, srcGreenCircle} from '../hooks/useSetContents';
 
 
 export const LetsLearn = () => {
     
-    const [display, setDisplay] = useState(null);
-    const [src, setSrc] = useState(null);
-
-    
-    
-    const screen = usePath();
+    const {screen, displayGreenCircle} = useSetContents();
     
     const navigate = useNavigate();
     const handleNavigate = (route) =>{
         navigate(route)
     };
-    
-    useEffect(() => {
-
-        switch (screen) {
-            case ('language'):
-                setDisplay(styles.greenCircleNone)
-                break;
-
-            case ('ondemand'):
-                setDisplay(styles.greenCircleNone)
-                break;
-
-            case (''):
-                setSrc("assets/img/hero/hero-_circ-verde.svg")
-                setDisplay(styles.greenCircle)
-                break
-        }
-
-      }, [screen]);
-
-
 
     return (
         
@@ -48,7 +21,7 @@ export const LetsLearn = () => {
             
         <section className={styles.letsLearnContainer}>
 
-            <img pathlocation={screen} className={display} src={src} alt="green circle"/>
+            <img pathlocation={screen} className={displayGreenCircle} src="assets/img/hero/hero-_circ-verde.svg" alt="green circle"/>
 
             <header className={styles.headerContainer}>
                 
