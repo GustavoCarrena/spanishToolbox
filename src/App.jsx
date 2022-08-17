@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { Ondemandcontainer } from './containers/Ondemandcontainer';
 import { HomeContainer } from './containers/HomeContainer';
 import { LanguageCourses } from './containers/LanguageCourses';
+import { AboutUsContainer } from './containers/AboutUsContainer';
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
         <Route path="/" element={<HomeContainer/>}/>
         <Route path="/language" element={<LanguageCourses/>}/>
         <Route path="/ondemand" element={<Ondemandcontainer/>}/>
+        <Route path="/about" element={<AboutUsContainer/>}/>
         <Route path="/*" element={<HomeContainer />} />
       </Routes>
       <Footer/>

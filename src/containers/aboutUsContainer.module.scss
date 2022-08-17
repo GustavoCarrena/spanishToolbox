@@ -1,0 +1,146 @@
+@use "../../styles/mixins.scss"as mixin;
+
+.aboutUsSection{
+    margin-top: 74px;
+    width: 100%;
+
+    .aboutUsContent{
+        @include mixin.flex-column-nowrap(center, center);
+
+        .aboutUsHeader{
+                @include mixin.flex-column-nowrap(center, center);
+            .headerImgContainer{
+                @include mixin.flex-row-nowrap(center, center);
+                width: 80%;
+                height: 200px;
+                margin: 10px 0 15px 0;
+                .headerImg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .headerTextContainer{
+                @include mixin.flex-column-nowrap(center, center);
+                width: 90%;
+                height: auto;
+                text-align: center;
+                font-family: var(--montserrat-font);
+                font-size: 0.8rem;
+                color: var(--gray);
+                margin: 10px 0;
+
+                .headerTitle{
+                    width: 100%;
+                    height: 20px;
+                    text-align: center;
+                    margin: 10px 0 0 0;
+                    line-height: 1.5rem;
+                    font-size: 1rem;
+                    color: var(--red);
+                    font-weight: bold;
+                }
+                .headerTextContainer{
+                    @include mixin.flex-column-nowrap(center, center);
+                    .text{
+                        width: 100%;
+                        margin-bottom: 10px;
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
+
+        .aboutUsRocketContainer{
+            @media(max-width:767px){
+                display: none;
+            }
+            width: 90%;
+            height: 85px;
+            .aboutUsRocketImg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .aboutUsMain{
+            @include mixin.flex-row-nowrap(center, center);
+            width: 100%;
+            .aboutUsLeftCircleContainer{
+                @media(max-width:767px){
+                    display: none;
+                }
+                .aboutUsLeftCircleImg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+          .aboutUsMainTextContainer{
+            @include mixin.flex-row-nowrap(center, center);
+            width: 80%;
+            height: auto;
+            text-align: center;
+            color: var(--violet);
+            font-family: var(--montserrat-font);
+            font-weight: 600;
+            font-size: 0.8rem;
+                .aboutUsMainText{
+                    text-align: center;
+                    .underlineText{
+                        text-decoration: underline;
+                        text-decoration-color: var(--yellow);
+                    }
+                }
+                .aboutUsMainTextLine{
+                    width: 60%;
+                    text-align: center;
+                }
+          }
+
+          .aboutUsRightCircleContainer{
+            @media(max-width:767px){
+                display: none;
+            }
+            .aboutUsRightCircleImg{
+                width: 100%;
+                height: 100%;
+            }
+          }
+
+        }
+
+        .aboutUsFooter{
+            @include mixin.flex-column-nowrap(center, center);
+            width: 80%;
+            margin: 10px 0 50px 0;
+            .aboutUsFooterCard{
+                @include mixin.flex-column-nowrap(center, center);
+                font-family: var(--montserrat-font);
+                width: 100%;
+                .cardImg{
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 30px;
+                }
+                .cardTitle{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: var(--blue);
+                    height: 38.5px;
+                    margin-top: 5px;
+                    padding: 5px 0 5px 0;
+                }
+                .cardText{
+                    width: 95%;
+                    text-align: center;
+                    font-size: 0.75rem;
+                    color: var(--gray);
+                }
+            }
+        }
+
+    }
+}
