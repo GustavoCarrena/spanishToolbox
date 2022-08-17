@@ -1,9 +1,30 @@
-import {screen,enrollNowContent} from '../hooks/useSetContents'
+// import {screen, enrollNowContent} from '../hooks/useSetContents';
+import React, {useEffect, useState} from 'react';
+import {usePath} from "../hooks/usePath";
 import {MySection} from "../templates/enrollNowStyles";
+
 import styles from './enrollnow.module.scss';
 
 export const EnrollNow = () => {
-  
+    
+    const [enrollNowContent, setEnrollNowContent] = useState('');
+    const screen = usePath();
+
+    useEffect(()=>{
+
+        switch (screen) {
+            
+            case 'ondemand':
+                    setEnrollNowContent('Enroll Now');
+                break;
+        
+                case 'about':
+                    setEnrollNowContent('Contact Us')
+                break;
+        }
+
+    },[screen])
+
     return (
         
         <MySection pathlocation={screen} className={styles.section}>

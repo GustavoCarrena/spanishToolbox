@@ -34,6 +34,7 @@ export const useSetContents = () => {
 
     },[screen])
 
-    return {screen,enrollNowContent,displayGreenCircle, srcGreenCircle}
+
+    return {screen,enrollNowContent,displayGreenCircle, srcGreenCircle};
 
 }
