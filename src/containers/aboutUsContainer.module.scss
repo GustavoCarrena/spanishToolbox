@@ -113,7 +113,7 @@
         .aboutUsFooter{
             @include mixin.flex-column-nowrap(center, center);
             width: 80%;
-            margin: 10px 0 50px 0;
+            margin: 10px 0 0 0;
             .aboutUsFooterCard{
                 @include mixin.flex-column-nowrap(center, center);
                 font-family: var(--montserrat-font);

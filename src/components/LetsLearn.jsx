@@ -1,43 +1,45 @@
-import React, {useEffect, useRef} from 'react';
+// import React, {useEffect, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
-import {usePath} from "../hooks/usePath";
+// import {usePath} from "../hooks/usePath";
 import {Myimg,Myh1, Myh1Language, TextContainer, TextContainerShort ,FirstTitle, SecondTitle, ThirdTitle, SecondButton, ThirdButton} from "../templates/letsLearnStyles";
 import {firstCard,secondCard,thirdCard,changeSectionTitle, changeCardImg, changeCardTitle, changeCardText} from '../helpers/letsLearnText';
 import styles from './letsLearn.module.scss';
-import { useState } from 'react';
+// import { useState } from 'react';
+import {screen,displayGreenCircle, srcGreenCircle} from '../hooks/useSetContents';
 
 
 export const LetsLearn = () => {
     
-    const [display, setDisplay] = useState(null);
-    const [src, setSrc] = useState(null);
+    // const [display, setDisplay] = useState(null);
+    // const [src, setSrc] = useState(null);
 
     
     
-    const screen = usePath();
+    // const screen = usePath();
+    
     const navigate = useNavigate();
     const handleNavigate = (route) =>{
         navigate(route)
     };
     
-    useEffect(() => {
+    // useEffect(() => {
 
-        switch (screen) {
-            case ('language'):
-                setDisplay(styles.greenCircleNone)
-                break;
+    //     switch (screen) {
+    //         case ('language'):
+    //             setDisplay(styles.greenCircleNone)
+    //             break;
 
-            case ('ondemand'):
-                setDisplay(styles.greenCircleNone)
-                break;
+    //         case ('ondemand'):
+    //             setDisplay(styles.greenCircleNone)
+    //             break;
 
-            case (''):
-                setSrc("assets/img/hero/hero-_circ-verde.svg")
-                setDisplay(styles.greenCircle)
-                break
-        }
+    //         case (''):
+    //             setSrc("assets/img/hero/hero-_circ-verde.svg")
+    //             setDisplay(styles.greenCircle)
+    //             break
+    //     }
 
-      }, [screen]);
+    //   }, [screen]);
 
 
 
@@ -46,17 +48,8 @@ export const LetsLearn = () => {
         <>
             
         <section className={styles.letsLearnContainer}>
-            
- 
-                        <img pathlocation={screen} className={display} src={src} alt="green circle"/>
-       
-                
-                
-                
-                
-   
-            
 
+            <img pathlocation={screen} className={displayGreenCircle} src={srcGreenCircle} alt="green circle"/>
 
             <header className={styles.headerContainer}>
                 

@@ -7,9 +7,6 @@ export const TestLevel = () => {
   
     const screen = usePath();
 
-
-
-  
     return (
         <Mysection pathlocation={screen} className={styles.sectionContainer}>
             
