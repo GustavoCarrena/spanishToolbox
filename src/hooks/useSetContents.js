@@ -6,6 +6,7 @@ export const useSetContents = () => {
     
     const [enrollTextBtn, setEnrollTextBtn] = useState('');
     const [displayGreenCircle, setdisplayGreenCircle] = useState(null);
+    const [greenCircleSrc, setgreenCircleSrc] = useState(null);
 
     const screen = usePath();
 
@@ -15,6 +16,7 @@ export const useSetContents = () => {
             
             case '':
                 setdisplayGreenCircle(styles.greenCircle);
+                setgreenCircleSrc("assets/img/hero/hero-_circ-verde.svg");
                 break;
 
             case 'ondemand':
@@ -33,7 +35,7 @@ export const useSetContents = () => {
         
         },[screen])
         
-        return {screen, enrollTextBtn, displayGreenCircle};
+        return {screen, enrollTextBtn, displayGreenCircle, greenCircleSrc};
 
 
 }

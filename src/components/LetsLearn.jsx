@@ -8,7 +8,7 @@ import styles from './letsLearn.module.scss';
 
 export const LetsLearn = () => {
     
-    const {screen, displayGreenCircle} = useSetContents();
+    const {screen, displayGreenCircle, greenCircleSrc} = useSetContents();
     
     const navigate = useNavigate();
     const handleNavigate = (route) =>{
@@ -21,7 +21,7 @@ export const LetsLearn = () => {
             
         <section className={styles.letsLearnContainer}>
 
-            <img pathlocation={screen} className={displayGreenCircle} src="assets/img/hero/hero-_circ-verde.svg" alt="green circle"/>
+            <img pathlocation={screen} className={displayGreenCircle} src={greenCircleSrc} alt="green circle"/>
 
             <header className={styles.headerContainer}>
                 
