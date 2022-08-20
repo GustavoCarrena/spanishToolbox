@@ -22,7 +22,7 @@ export const LetsLearn = () => {
         <section className={styles.letsLearnContainer}>
 
             {
-                showCircle &&
+                (showCircle) &&
                 <img pathlocation={screen} className={styles.greenCircle} src={greenCircleSrc} alt="green circle"/>
 
             }
