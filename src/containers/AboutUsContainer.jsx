@@ -13,7 +13,7 @@ export const AboutUsContainer = () => {
             </div>
             <div className={styles.headerTextContainer}>
                 <p className={styles.headerTitle}>ABOUT US</p>
-                <div className={styles.headerTextContainer}>
+                <div className={styles.headerText}>
                     <p className={`${styles.text} ${styles.text1}`}>
                       The Spanish Toolbox is an online learning website designed to immerse students in an all-new language acquisition experience. Conscious of the obstacles that often discourage those who want to practice a new language, our team of young professionals has undertaken thorough research to bring the unlimited potential of online learning to your screen. 
                     </p>

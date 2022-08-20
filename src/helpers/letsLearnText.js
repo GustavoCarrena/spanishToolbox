@@ -27,7 +27,7 @@ export const thirdCard = {
 };
 
 export const changeSectionTitle = (screen) =>{
-    if (screen === 'language' || screen === '') {
+    if (screen === 'language' || screen === 'home') {
         return 'Language Courses'
     } else if (screen === 'ondemand') {
         return 'On-Demand Courses'
@@ -35,7 +35,7 @@ export const changeSectionTitle = (screen) =>{
 };
 
 export const changeCardImg = (screen, card) => {
-    if (screen === 'language' ||screen === '') {
+    if (screen === 'language' ||screen === 'home') {
         return card.languageImg;
     } else if (screen === 'ondemand') {
         return card.ondemandImg;
@@ -43,7 +43,7 @@ export const changeCardImg = (screen, card) => {
 } ;
 
 export const changeCardTitle = (screen, card) => {
-    if (screen === 'language' ||screen === '') {
+    if (screen === 'language' ||screen === 'home') {
         return card.languageTitle;
     } else if (screen === 'ondemand') {
         return card.ondemandTitle;
@@ -51,7 +51,7 @@ export const changeCardTitle = (screen, card) => {
 } ;
 
 export const changeCardText = (screen, card) => {
-    if (screen === 'language' ||screen === '') {
+    if (screen === 'language' ||screen === 'home') {
         return card.languageText;
     } else if (screen === 'ondemand') {
         return card.ondemandText;

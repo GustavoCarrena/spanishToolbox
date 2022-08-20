@@ -1,0 +1,164 @@
+@use "../../styles/mixins.scss"as mixin;
+.contactSection{
+    @include mixin.flex-column-nowrap(center, flex-start);
+    margin-top: 74px;
+    padding-top: 7px;
+    background-color: var(--yellow);
+
+    .contactContainer{
+        @include mixin.flex-column-nowrap(center, flex-start);
+        background-color: #fff;
+        border-radius: 50px 50px 0 0;
+        margin: 40px 0;
+        padding: 60px 0 30px 0;
+        position: relative;
+        width: 100%;
+
+        .toHomeContainer{
+            @include mixin.flex-row-nowrap(center, flex-start);
+            position: relative;
+            top: -47px;
+            font-family: var(--montserrat-font);
+            font-weight: 600;
+            font-size: 0.6rem;
+            width: 80px;
+            left: -28%;
+
+            .toHome{
+                color: var(--red);
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: underline var(--red);
+                    color: var(--red);
+                }
+
+            }
+            .toHome:before{
+                content: 'Home >';
+            }
+
+            .actualPage{
+                margin-left: 1%;
+                color: var(--violet);
+                @media(min-width: 768px){
+                    margin-left: 0.2%;
+                }
+            }
+        }
+
+        .formContainer{
+            @include mixin.flex-column-nowrap(center, flex-start);
+            width: 90%;
+            .nameLastnameContainer{
+                @include mixin.flex-column-nowrap(center, center);
+                width: 100%;
+                .inputName{
+
+                }
+                .inputLastName{
+
+                }
+            }
+
+            .inputContainers{
+                @include mixin.flex-column-nowrap(center, center);
+                width: 100%;
+                max-width: 288px;
+                .labels{
+                    align-self: flex-start;
+                    color: var(--violet);
+                    font-family: var(--montserrat-font);
+                    font-weight: 600;
+                    padding-left: 3%;
+                    font-size: 0.85rem;
+                    margin-bottom: 5px;
+                }
+                .inputs{
+                    width: 100%;
+                    border-radius: 33px;
+                    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                    background-color: #fff;
+                    border: 1px solid rgba(0, 0, 0, 0.16);
+                    margin-bottom: 15px;
+                    height: 35px;
+                    color: var(--gray);
+                    font-family: var(--montserrat-font);
+                    padding: 1% 3%;
+                }
+
+                .inputsError{
+                    width: 100%;
+                    border-radius: 33px;
+                    box-shadow: 0 0 15px 0 var(--red);
+                    background-color: #fff;
+                    border: 1px solid var(--red);
+                    margin-bottom: 15px;
+                    height: 35px;
+                    color: var(--gray);
+                    font-family: var(--montserrat-font);
+                    font-style: italic;
+                    padding: 1% 3%;
+                    
+                }
+
+                .inputMessage{
+                    height: 150px;
+                    padding: 3% 6%;
+                    resize: none;
+                }
+
+                .inputLevel{
+                    font-size: 0.8rem;
+                    .selectOption{
+                        font-size: 0.55rem;
+                        font-weight: 600;
+                        color: var(--violet);
+                    }
+                }
+                .inputLevelError{
+                    font-size: 0.8rem;
+                    box-shadow: 0 0 15px 0 var(--red);
+                    border: 1px solid var(--red);
+                    font-style: italic;
+                    .selectOption{
+                        font-size: 0.55rem;
+                        font-weight: 600;
+                        color: var(--violet);
+                    }
+                }
+
+                
+    
+            }
+
+            .errorsMsg{
+                position: absolute;
+                color: var(--red);
+                font-family: var(--montserrat-font);
+                font-size: 0.8rem;
+                font-style: italic;
+                margin-top: -54px;
+                right: 9%;
+            }
+
+        }
+
+        .btn{
+            background-color: var(--yellow);
+            color: var(--white);
+            border: none;
+            border-radius: 69px;
+            font-size: 1rem;
+            font-family: var(--montserrat-font);
+            font-weight: 600;
+            width: 130px;
+            height: 50px;
+        }
+
+
+    }
+
+
+
+
+}

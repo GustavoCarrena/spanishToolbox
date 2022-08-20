@@ -16,7 +16,8 @@
     "react-router-dom": "^6.3.0",
     "react-scroll": "^1.8.7",
     "sass": "^1.54.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "sweetalert2": "^11.4.28"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",

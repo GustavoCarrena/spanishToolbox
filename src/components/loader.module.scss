@@ -1,0 +1,12 @@
+@use "../../styles/mixins.scss"as mixin;
+.loader{
+    @include mixin.flex-row-nowrap(center, center);
+    width: 100%;
+    color: var(--yellow) !important;
+    .text{
+        color: var(--violet);
+        font-family: var(--montserrat-font);
+        font-size: 0.8rem;
+        line-height: 0.85rem;
+    }
+}

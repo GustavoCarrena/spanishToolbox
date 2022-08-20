@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const myimg = styled.img`
-display:${props => props.pathlocation === '' ? 'inline-block !important' : 'none !important'};
+display:${props => props.pathlocation === 'home' ? 'inline-block !important' : 'none !important'};
 `
 const myh1 = styled.h1`
 display:${props => props.pathlocation === 'language' || props.pathlocation === 'ondemand' ? 'none !important' : ''}
@@ -74,14 +74,10 @@ const textContainer = styled.div`
 `
 const textContainerShort = styled.div`
 @media(max-width:767px){
-    margin:${props => props.pathlocation === 'ondemand' ? '10px 0 0 0 !important' : ''}
+    margin:${props => props.pathlocation === 'ondemand' ? '10px 0 30px 0 !important' : ''}
 }
 `
-const cards = styled.div`
-@media(max-width:767px){
-    margin:${props => props.pathlocation === 'ondemand' ? '10px 0 0 0 !important' : ''}
-}
-`
+
 export const Myimg = myimg;
 export const Myh1 = myh1;
 export const Myh1Language = myh1Language;

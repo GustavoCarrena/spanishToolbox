@@ -22,7 +22,7 @@ export const Header = () => {
     <>
     <Navbar collapseOnSelect fixed="top" expand="lg" className={styles.navBarContainer}>
       <Container  fluid className={styles.contentContainer}>
-        <Navbar.Brand as={Link} to="/" className={styles.logo}>
+        <Navbar.Brand as={Link} to="/home" className={styles.logo}>
           <div onClick={onClickUp} className={styles.logoContainer}>
             <img
               src="/assets/img/logo/logo.svg"
@@ -84,7 +84,7 @@ export const Header = () => {
               <Nav.Link as={Link} to="/about" smooth='true' duration={100} onClick={onClickUp} eventKey="3" className={styles.links} style={styles['.links']}>
                 About Us
               </Nav.Link>
-              <Nav.Link as={Link} to="/" smooth='true' duration={100} onClick={onClickUp} eventKey="4" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/contact" smooth='true' duration={100} onClick={onClickUp} eventKey="4" className={styles.links} style={styles['.links']}>
                 Contact
               </Nav.Link>
             </Nav>

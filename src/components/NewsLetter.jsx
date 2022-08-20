@@ -28,7 +28,7 @@ export const NewsLetter = () => {
                     (Coming soon)</p>
                 <div className={styles.formContainer}>
                     <input className={styles.input} type="text" placeholder="Your email"/>
-                    <button className={styles.button} onClick={()=> handleNavigate('/')} >Suscribe</button>
+                    <button className={styles.button} onClick={()=> handleNavigate('/home')} >Suscribe</button>
                 </div>
             </div>
             <div className={styles.papers}>

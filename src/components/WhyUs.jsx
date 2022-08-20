@@ -80,7 +80,7 @@ export const WhyUs = () => {
                 </div>
             </main>
             <MyFooter pathlocation={screen} className={styles.btnContainer}>
-                <button className={styles.btn} onClick={() => handleNavigate ('/')} >Read More</button>
+                <button className={styles.btn} onClick={() => handleNavigate ('/home')} >Read More</button>
             </MyFooter>
         </MySection>
     </div>

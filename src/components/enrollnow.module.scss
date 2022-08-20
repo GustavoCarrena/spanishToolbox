@@ -46,7 +46,7 @@
     .imgContainer{
         @include mixin.flex-row-nowrap(center, center);
         .papers{
-            @media(max-width:559px){
+            @media(max-width:767px){
                 display: none;
             }
             @include mixin.flex-column-nowrap(center, center);

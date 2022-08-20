@@ -20,9 +20,9 @@ export const Footer = () => {
                     <p className={styles.mainContentLogoText}>We teach meaningful language, not language with meaning</p>
                 </div>
                 <ul className={styles.linkContainer}>
-                    <Link className={styles.link} to={'/'}>About Us</Link>
-                    <Link className={styles.link} to={'/'}>Contact Us</Link>
-                    <Link className={styles.link} to={'/'}>FAQ's</Link>
+                    <Link className={styles.link} to={'/home'}>About Us</Link>
+                    <Link className={styles.link} to={'/home'}>Contact Us</Link>
+                    <Link className={styles.link} to={'/home'}>FAQ's</Link>
                 </ul>
             </div>
 

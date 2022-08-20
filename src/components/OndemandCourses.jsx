@@ -26,7 +26,7 @@ export const OndemandCourses = () => {
                       of the Spanish-speaking countries covered. Available both in English and Spanish.</p>
                   </div>
                 </div>
-                <button className={`${styles.cardButton} ${styles.firstCardButton}`} onClick={() => handleNavigate('/')}>Read More</button>
+                <button className={`${styles.cardButton} ${styles.firstCardButton}`} onClick={() => handleNavigate('/home')}>Read More</button>
             </div>
             <div className={`${styles.secondCard} ${styles.cards}`}>
                 <img className={styles.cardImg} src="assets/img/fotos/ruthson-zimmerman-Ws4wd-vJ9M0-unsplash.jpg" alt="photo"/>
@@ -38,7 +38,7 @@ export const OndemandCourses = () => {
                         ensure success in business relationships with Hispanic peers.</p>
                   </div>
                 </div>
-                <button className={`${styles.cardButton} ${styles.secondCardButton}`} onClick={() => handleNavigate('/')}>Read More</button>
+                <button className={`${styles.cardButton} ${styles.secondCardButton}`} onClick={() => handleNavigate('/home')}>Read More</button>
             </div>
             <div className={`${styles.thirdCard} ${styles.cards}`}>
                 <img className={styles.cardImg} src="assets/img/fotos/estudiante.jpg" alt="photo"/>
@@ -50,7 +50,7 @@ export const OndemandCourses = () => {
                         Spanish language and literature graduates exclusively.</p>
                   </div>
                 </div>
-                <button className={`${styles.cardButton} ${styles.thirdCardButton}`} onClick={() => handleNavigate('/')}>Read More</button>
+                <button className={`${styles.cardButton} ${styles.thirdCardButton}`} onClick={() => handleNavigate('/home')}>Read More</button>
             </div>
         </section>
     </main>

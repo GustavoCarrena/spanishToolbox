@@ -3,17 +3,43 @@
 .aboutUsSection{
     margin-top: 74px;
     width: 100%;
+    background-color: var(--yellow);
 
     .aboutUsContent{
         @include mixin.flex-column-nowrap(center, center);
-
+        background-color: var(--white);
+        position: relative;
+        top: 22px;
+        margin-bottom: 22px;
+        border-radius: 50px 50px 0 0;
         .aboutUsHeader{
                 @include mixin.flex-column-nowrap(center, center);
+                @media(min-width:768px){
+                    @include mixin.flex-row-nowrap(flex-start, center);
+                    margin-top: 85px;
+                }
+                @media(min-width:1024px){
+                    width: 90%;
+                }
             .headerImgContainer{
                 @include mixin.flex-row-nowrap(center, center);
                 width: 80%;
                 height: 200px;
                 margin: 10px 0 15px 0;
+                @media(min-width:768px){
+                    max-width: 300px;
+                    height: 300px;
+                    padding: 0 2%;
+                }
+                @media(min-width:1024px){
+                    max-width: 551px;
+                    height: 450px;
+                    margin: -38px 0 0 0;
+                }
+                @media(min-width:1380px){
+                    max-width: 620px;
+                }
+
                 .headerImg{
                     width: 100%;
                     height: 100%;
@@ -28,22 +54,42 @@
                 font-size: 0.8rem;
                 color: var(--gray);
                 margin: 10px 0;
+                @media(min-width:768px){
+                    max-width: 468px;
+                    height: 340px;
+                    padding: 0 1%;
+                }
+                @media(min-width:1024px){
+                    max-width: 525px;
+                    height: 360px;
+                    padding: 5% 1% 0 1%;
+                }
+                @media(min-width:1380px){
+                    max-width: 590px;
+                }
 
                 .headerTitle{
                     width: 100%;
                     height: 20px;
                     text-align: center;
-                    margin: 10px 0 0 0;
+                    margin: 10px 0 15px 0;
                     line-height: 1.5rem;
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     color: var(--red);
                     font-weight: bold;
+                    @media(min-width:768px){
+                        margin: -133px 0 38px 0;
+                        font-size: 1.4rem;
+                    }
                 }
-                .headerTextContainer{
+                .headerText{
                     @include mixin.flex-column-nowrap(center, center);
+                    width: 90%;
+                    @media(min-width:1024px){
+                        width: 80%;
+                    }
                     .text{
                         width: 100%;
-                        margin-bottom: 10px;
                         text-align: center;
                     }
                 }
@@ -55,6 +101,14 @@
             @media(max-width:767px){
                 display: none;
             }
+
+            @media(min-width:768px){
+                width: 50%;
+                height: 70px;
+                align-self: flex-end;
+                padding-right: 18%;
+            }
+
             width: 90%;
             height: 85px;
             .aboutUsRocketImg{
@@ -66,6 +120,10 @@
         .aboutUsMain{
             @include mixin.flex-row-nowrap(center, center);
             width: 100%;
+            @media(min-width:768px){
+                justify-content: space-between;
+
+            }
             .aboutUsLeftCircleContainer{
                 @media(max-width:767px){
                     display: none;
@@ -85,6 +143,15 @@
             font-family: var(--montserrat-font);
             font-weight: 600;
             font-size: 0.8rem;
+            @media(min-width:768px){
+                display: block;
+                max-width: 523px;
+                font-size: 1rem;
+            }
+            @media(min-width:1024px){
+                max-width: 862px;
+                font-size: 1.4rem;
+            }
                 .aboutUsMainText{
                     text-align: center;
                     .underlineText{
@@ -114,10 +181,32 @@
             @include mixin.flex-column-nowrap(center, center);
             width: 80%;
             margin: 10px 0 0 0;
+            @media(min-width:768px){
+                @include mixin.flex-row-nowrap(baseline, space-between);
+                width: 95%;
+                height: 345px;
+                margin: 10px 0 50px 0;
+            }
+            @media(min-width:890px){
+                width: 85%;
+            }
+            @media(min-width:1024px){
+                width: 75%;
+                max-width: 768px;
+            }
             .aboutUsFooterCard{
                 @include mixin.flex-column-nowrap(center, center);
                 font-family: var(--montserrat-font);
                 width: 100%;
+                max-width: 280px;
+                @media(min-width:768px){
+                    max-width: 220px;
+                    height: 345px;
+                }
+                @media(min-width:890px){
+                    max-width: 230px;
+                    height: 365px;
+                }
                 .cardImg{
                     width: 100%;
                     height: 150px;
@@ -132,6 +221,14 @@
                     height: 38.5px;
                     margin-top: 5px;
                     padding: 5px 0 5px 0;
+                    @media(min-width:768px){
+                        padding: 0;
+                        margin: 6px 0 12px 0;
+                        width: 95%;
+                    }
+                    @media(min-width:1024px){
+                        width: 90%;
+                    }
                 }
                 .cardText{
                     width: 95%;

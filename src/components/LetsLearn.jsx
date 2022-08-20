@@ -8,7 +8,7 @@ import styles from './letsLearn.module.scss';
 
 export const LetsLearn = () => {
     
-    const {screen, displayGreenCircle, greenCircleSrc} = useSetContents();
+    const {screen, greenCircleSrc, showCircle} = useSetContents();
     
     const navigate = useNavigate();
     const handleNavigate = (route) =>{
@@ -21,7 +21,12 @@ export const LetsLearn = () => {
             
         <section className={styles.letsLearnContainer}>
 
-            <img pathlocation={screen} className={displayGreenCircle} src={greenCircleSrc} alt="green circle"/>
+            {
+                showCircle &&
+                <img pathlocation={screen} className={styles.greenCircle} src={greenCircleSrc} alt="green circle"/>
+
+            }
+
 
             <header className={styles.headerContainer}>
                 
@@ -50,7 +55,7 @@ export const LetsLearn = () => {
                     <TextContainerShort pathlocation={screen} className={styles.textContainer}>
                         <p className={`${styles.firstCardText} ${styles.text}`}>{changeCardText(screen, firstCard)}</p>
                     </TextContainerShort>
-                    <button className={`${styles.firstCardButton} ${styles.btn}`} onClick={() => handleNavigate('/')}>Read More</button>
+                    <button className={`${styles.firstCardButton} ${styles.btn}`} onClick={() => handleNavigate('/home')}>Read More</button>
                 </div>
                 <div className={styles.cards}>
                     <div className={styles.imgContainer}>
@@ -62,7 +67,7 @@ export const LetsLearn = () => {
                     <TextContainerShort pathlocation={screen} className={styles.textContainer}>
                         <p className={`${styles.secondCardText} ${styles.text}`}>{changeCardText(screen, secondCard)}</p>
                     </TextContainerShort>
-                    <SecondButton pathlocation={screen} className={`${styles.secondCardButton} ${styles.btn}`} onClick={() => handleNavigate('/')}>Read More</SecondButton>
+                    <SecondButton pathlocation={screen} className={`${styles.secondCardButton} ${styles.btn}`} onClick={() => handleNavigate('/home')}>Read More</SecondButton>
                 </div>
                 <div className={styles.cards}>
                     <div className={styles.imgContainer}>
@@ -74,7 +79,7 @@ export const LetsLearn = () => {
                     <TextContainer pathlocation={screen} className={styles.textContainer}>
                         <p className={`${styles.thirdCardText} ${styles.text}`}>{changeCardText(screen, thirdCard)}</p>
                     </TextContainer>
-                    <ThirdButton pathlocation={screen} className={`${styles.thirdCardButton} ${styles.btn}`} onClick={() => handleNavigate('/')}>Read More</ThirdButton>
+                    <ThirdButton pathlocation={screen} className={`${styles.thirdCardButton} ${styles.btn}`} onClick={() => handleNavigate('/home')}>Read More</ThirdButton>
                 </div>
                     <Myimg pathlocation={screen} className={styles.yellowCircle} src="assets/img/hero/hero-circ-amarillo.svg" alt="circle image"/>
             </main>

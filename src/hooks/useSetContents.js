@@ -1,31 +1,37 @@
 import React, { useState, useEffect } from "react";
 import {usePath} from "./usePath";
 import styles from '../components/letsLearn.module.scss';
+import { useMemo } from "react";
 
 export const useSetContents = () => {
     
     const [enrollTextBtn, setEnrollTextBtn] = useState('');
     const [displayGreenCircle, setdisplayGreenCircle] = useState(null);
-    const [greenCircleSrc, setgreenCircleSrc] = useState(null);
+
 
     const screen = usePath();
+    
+    const greenCircleSrc = "assets/img/hero/hero-_circ-verde.svg";
+
+    const showCircle = useMemo(() => {
+        return screen === 'home'
+    },[screen]);
+    
 
     useEffect(()=>{
         
         switch (screen) {
             
-            case '':
+            case 'home':
                 setdisplayGreenCircle(styles.greenCircle);
-                setgreenCircleSrc("assets/img/hero/hero-_circ-verde.svg");
                 break;
 
             case 'ondemand':
                 setEnrollTextBtn('Enroll Now');
-                setdisplayGreenCircle(styles.greenCircleNone);
                 break;
 
             case 'language':
-                setdisplayGreenCircle(styles.greenCircleNone);
+                setEnrollTextBtn('Enroll Now');
                 break;
 
             case 'about':
@@ -35,7 +41,7 @@ export const useSetContents = () => {
         
         },[screen])
         
-        return {screen, enrollTextBtn, displayGreenCircle, greenCircleSrc};
+        return {screen, enrollTextBtn, displayGreenCircle, greenCircleSrc, showCircle};
 
 
 }

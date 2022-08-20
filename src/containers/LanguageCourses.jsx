@@ -15,7 +15,7 @@ export const LanguageCourses = () => {
   
   const navigate = useNavigate();
   const handleToHome = () =>{
-    navigate('/');
+    navigate('/home');
   }
 
   return (

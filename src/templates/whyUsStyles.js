@@ -18,7 +18,7 @@ display:${props => ((props.pathlocation === 'language' || props.pathlocation ===
 `
 
 export const myh6 = styled.h6`
-display:${props => ((props.pathlocation === 'language' || props.pathlocation === 'ondemand') ? 'block !important' : props.pathlocation === '' ? 'none !important' : '')};
+display:${props => ((props.pathlocation === 'language' || props.pathlocation === 'ondemand') ? 'block !important' : props.pathlocation === 'home' ? 'none !important' : '')};
 margin-top: 20px;
     @media(max-width:767px){
         font-size: 1.7rem !important;

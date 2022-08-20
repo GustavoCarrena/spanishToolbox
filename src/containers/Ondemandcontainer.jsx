@@ -11,7 +11,7 @@ export const Ondemandcontainer = () => {
   const navigate = useNavigate();
   
   const handleToHome = () =>{
-    navigate('/');
+    navigate('/home');
   }
   
   return (

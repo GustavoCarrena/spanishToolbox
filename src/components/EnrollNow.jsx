@@ -1,5 +1,5 @@
 import {useSetContents} from "../hooks/useSetContents";
-import {MySection} from "../templates/enrollNowStyles";
+import {MySection, MyBtnContainer,MyBtn, MyPapersContainer} from "../templates/enrollNowStyles";
 import styles from './enrollnow.module.scss';
 
 export const EnrollNow = () => {
@@ -10,15 +10,15 @@ export const EnrollNow = () => {
         
         <MySection pathlocation={screen} className={styles.section}>
             
-            <div className={styles.btnContainer}>
-                <button className={styles.btn}>{enrollTextBtn}</button>
-            </div>
+            <MyBtnContainer pathlocation={screen} className={styles.btnContainer}>
+                <MyBtn pathlocation={screen} className={styles.btn}>{enrollTextBtn}</MyBtn>
+            </MyBtnContainer>
 
             <div className={styles.imgContainer}>
-                <div className={styles.papers}>
+                <MyPapersContainer pathlocation={screen} className={styles.papers}>
                     <img className={styles.large} src="assets/img/hero/post-it.svg" alt="paper" />
                     <img className={styles.small} src="assets/img/hero/post-it.svg" alt="paper" />
-                </div>
+                </MyPapersContainer>
                 <div className={styles.lampContainer}>
                     <img className={styles.lamp} src="assets/img/hero/lampara.svg" alt="lamp" />
                 </div>
