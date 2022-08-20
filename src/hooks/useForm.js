@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { helpHttp } from '../helpers/helpHttp';
 import Swal from 'sweetalert2';
+import { SuccessAlert } from '../components/SuccessAlert';
 
 export const useForm = (initialValues, dataValidations) => {
 
@@ -9,8 +10,6 @@ export const useForm = (initialValues, dataValidations) => {
     const [loading, setLoading] = useState(false);
     const [response, setResponse] = useState(null);
 
-    // const confirmData = () => {console.log(form);};
-    
     const handleChange = (e) => { const { name, value } = e.target; setForm({ ...form, [name]: value }) };
     
     const handleBlur = (e) => {handleChange(e); setErrors(dataValidations(form))};
@@ -33,22 +32,23 @@ export const useForm = (initialValues, dataValidations) => {
             setResponse(true);
         })
         .then((res)=>{
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'center',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
+          // const Toast = Swal.mixin({
+          //   toast: true,
+          //   position: 'center',
+          //   showConfirmButton: false,
+          //   timer: 3000,
+          //   timerProgressBar: true,
+          //   didOpen: (toast) => {
+          //     toast.addEventListener('mouseenter', Swal.stopTimer)
+          //     toast.addEventListener('mouseleave', Swal.resumeTimer)
+          //   }
+          // })
           
-          Toast.fire({
-            icon: 'success',
-            title: 'Information sent successfully!'
-          })
+          // Toast.fire({
+          //   icon: 'success',
+          //   title: 'Information sent successfully!'
+          // })
+          <SuccessAlert/>
         })
     };
 
