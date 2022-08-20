@@ -2,13 +2,16 @@ import styled from 'styled-components';
 
 const mySection = styled.section`
 align-items:${props => (props.pathlocation === 'about' ? 'flex-start !important' : '')};
-height:${props => (props.pathlocation === 'about' ? '138px !important' : '')};
+height:${props => (props.pathlocation === 'about' ? '170px !important' : '')};
+
 @media(min-width:768px){
     height:${props => (props.pathlocation === 'about' ? '155px !important' : '')};
 }
 `
 
 const myBtnContainer = styled.div`
+display:${props => (props.pathlocation === 'contact' ? 'none !important' : '')};
+width:${props => (props.pathlocation === 'about' ? '230px !important' : '')};
 @media(min-width:768px){
     width:${props => (props.pathlocation === 'about' ? '218px !important' : '')};
     height:${props => (props.pathlocation === 'about' ? '65px !important' : '')};
@@ -18,10 +21,12 @@ const myBtnContainer = styled.div`
 
 const myBtn = styled.button`
 background-color:${props => (props.pathlocation === 'about' ? 'var(--red) !important' : '')};
-font-size:${props => (props.pathlocation === 'about' ? '1rem !important' : '')};
+font-size:${props => (props.pathlocation === 'about' ? '1.1rem !important' : '')};
 margin:${props => (props.pathlocation === 'about' ? '0 0 20px 0 !important' : '')};
 @media(min-width:768px){
     font-size:${props => (props.pathlocation === 'about' ? '1.25rem !important' : '')};
+    margin-top:${props => (props.pathlocation === 'about' ? '-150px !important' : '')};
+    z-index:${props => (props.pathlocation === 'about' ? '9999 !important' : '')};
 }
 `
 const myPapersContainer = styled.div`
@@ -32,8 +37,19 @@ const myPapersContainer = styled.div`
 }
 `
 
+const myLampContainer = styled.div`
+    display:${props => (props.pathlocation === 'about' ? 'none !important' : '')};
+    width:${props => (props.pathlocation === 'contact' ? '80px !important' : '')};
+    margin-top:${props => (props.pathlocation === 'contact' ? '22px !important' : '')};
+    @media(min-width:768px){
+        display:${props => (props.pathlocation === 'about' ? 'flex !important' : '')};
+        width:${props => (props.pathlocation === 'about' ? '100px !important' : '')};
+    }
+
+`
 
 export const MySection = mySection;
 export const MyBtnContainer = myBtnContainer;
 export const MyBtn = myBtn;
 export const MyPapersContainer = myPapersContainer;
+export const MyLampContainer = myLampContainer;

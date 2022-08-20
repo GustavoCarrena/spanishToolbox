@@ -9,7 +9,7 @@ export const AboutUsContainer = () => {
         
         <header className={styles.aboutUsHeader}>
             <div className={styles.headerImgContainer}>
-              <img className={styles.headerImg} src="assets/img/aboutUs/primera-provisoria.jpg" alt="image" />
+              <img className={styles.headerImg} src="assets/img/aboutUs/clase.svg" alt="image" />
             </div>
             <div className={styles.headerTextContainer}>
                 <p className={styles.headerTitle}>ABOUT US</p>
@@ -25,39 +25,41 @@ export const AboutUsContainer = () => {
 
         </header>
 
+        <div className={styles.aboutUsLeftCircleContainer}>
+              <img className={styles.aboutUsLeftCircleImg} src="assets/img/aboutUs/circulo-azul-provisoria.jpg" alt="image" />
+          </div>
+
         <div className={styles.aboutUsRocketContainer}>
-            <img className={styles.aboutUsRocketImg} src="assets/img/aboutUs/cohete-provisoria.jpg" alt="image" />
+            <img className={styles.aboutUsRocketImg} src="assets/img/aboutUs/cohete.svg" alt="image" />
         </div>
         
         <main className={styles.aboutUsMain}>
-          <div className={styles.aboutUsLeftCircleContainer}>
-              <img className={styles.aboutUsLeftCircleImg} src="assets/img/aboutUs/circulo-azul-provisoria.jpg" alt="image" />
-          </div>
+
           <div className={styles.aboutUsMainTextContainer}>
               <p className={styles.aboutUsMainText}>
                 Our proposal is based on exploiting the Internet’s vast and powerful resources to take the learning experience to a whole new level to make Spanish classes available everywhere. Regardless of whether you live in Nairobi or Hong Kong, can study in the morning or late at night, The Spanish Toolbox intends to make language and culture classes <span className={styles.underlineText}>available for everyone everywhere</span>.
               </p>
               <div className={styles.aboutUsMainTextLine}></div>
           </div>
-          <div className={styles.aboutUsRightCircleContainer}>
-              <img className={styles.aboutUsRightCircleImg} src="assets/img/aboutUs/circulo-verde-provisoria.jpg" alt="image" />
-          </div>
-
         </main>
+
+        <div className={styles.aboutUsRightCircleContainer}>
+              <img className={styles.aboutUsRightCircleImg} src="assets/img/aboutUs/circ-verde.svg" alt="image" />
+        </div>
 
         <footer className={styles.aboutUsFooter}>
           <div className={styles.aboutUsFooterCard}>
-              <img className={styles.cardImg} src="assets/img/aboutUs/manzana-provisoria.jpg" alt="image" />
-              <h6 className={styles.cardTitle}>DIGITAL CLASSROOM</h6>
+              <img className={styles.cardImg} src="assets/img/aboutUs/manzana.jpg" alt="image" />
+              <h6 className={`${styles.cardTitle} ${styles.smallTitle} `}>DIGITAL CLASSROOM</h6>
               <p className={styles.cardText}>All our content has been specifically designed for a digital environment in order to provide an interactive learning experience.</p>
           </div>
           <div className={styles.aboutUsFooterCard}>
               <img className={styles.cardImg} src="assets/img/fotos/clase-online.jpg" alt="image" />
-              <h6 className={styles.cardTitle}>ONLINE TEACHING</h6>
+              <h6 className={`${styles.cardTitle} ${styles.smallTitle} `}>ONLINE TEACHING</h6>
               <p className={styles.cardText}>Our teachers have been trained to guide you through the learning process and make your online experience accessible, enjoyable, and enriching.</p>
           </div>
           <div className={styles.aboutUsFooterCard}>
-              <img className={styles.cardImg} src="assets/img/aboutUs/cowboy-provisoria.jpg" alt="image" />
+              <img className={styles.cardImg} src="assets/img/aboutUs/cowboy.jpg" alt="image" />
               <h6 className={styles.cardTitle}>YOU CAN LEARN AT YOUR OWN PACE</h6>
               <p className={styles.cardText}>You can learn at your own pace: Individual courses allow you to be in control of when you learn, review, and practice. Contact us for more information on how to shape your own learning experience.</p>
           </div>

@@ -13,7 +13,7 @@ export const Header = () => {
  const onClickUp = () => {
     setTimeout(() => {
       scroll.scrollToTop();      
-    }, 500);
+    }, 0);
 
  }
 

@@ -29,7 +29,7 @@ top:${props => (props.pathlocation === 'language' ? '97px !important' : '')};
 `
 
 const mycontent = styled.div`
-margin:${props => (props.pathlocation === 'language' ? '30px 0' : '')};
+margin:${props => (props.pathlocation === 'language' ? '-10px 0 10px 0' : '')};
 @media(min-width:750px){
     width:${props => (props.pathlocation === 'language' ? '100% !important' : '')};
     margin:${props => (props.pathlocation === 'language' ? '166px 8% 32px 0px' : '')};

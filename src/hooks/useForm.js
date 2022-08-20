@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { helpHttp } from '../helpers/helpHttp';
+import { animateScroll as scroll} from 'react-scroll';
 import Swal from 'sweetalert2';
-import { SuccessAlert } from '../components/SuccessAlert';
 
 export const useForm = (initialValues, dataValidations) => {
 
@@ -10,6 +11,8 @@ export const useForm = (initialValues, dataValidations) => {
     const [loading, setLoading] = useState(false);
     const [response, setResponse] = useState(null);
 
+    const navigate = useNavigate();
+    
     const handleChange = (e) => { const { name, value } = e.target; setForm({ ...form, [name]: value }) };
     
     const handleBlur = (e) => {handleChange(e); setErrors(dataValidations(form))};
@@ -50,6 +53,20 @@ export const useForm = (initialValues, dataValidations) => {
           })
 
         })
+        .then((res)=>{
+          setForm(initialValues);
+        })
+        .then((res)=>{
+            navigate('/home');
+          })
+          .then((res)=>{
+            setTimeout(() => {
+              scroll.scrollToTop();
+            }, 500);
+          })
+        
+
+
     };
 
     return { form, errors, handleChange, handleBlur, loading,response,handleSubmit };

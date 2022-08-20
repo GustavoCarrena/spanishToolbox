@@ -4,7 +4,7 @@ import { useForm } from '../hooks/useForm';
 import {formValidations,initialValues,formIsEmpty,} from "../helpers/formValidations";
 import { Loader } from '../components/Loader';
 import styles from './contactContainer.module.scss';
-import { SuccessAlert } from '../components/SuccessAlert';
+import { EnrollNow } from '../components/EnrollNow';
 
 
 export const ContactContainer = () => {
@@ -22,8 +22,10 @@ export const ContactContainer = () => {
           
           <div className={styles.toHomeContainer}>
             <span onClick={handleToHome} className={styles.toHome}></span>
-            <span className={styles.actualPage}>Contact</span>
+            <span className={styles.actualPage}>Contact Us</span>
           </div>
+
+          
 
           <form className={`${styles.formContainer}` } onSubmit={handleSubmit}>
 
@@ -126,6 +128,7 @@ export const ContactContainer = () => {
                 </button>
           </form>
         </div>
+        <EnrollNow/>
     </section>
   )
 }
