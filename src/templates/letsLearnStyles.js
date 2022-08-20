@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const myimg = styled.img`
-display:${props => props.pathlocation === 'home' ? 'inline-block !important' : 'none !important'};
+display:${props => (props.pathlocation === 'home' || props.pathlocation === ' ') ? 'inline-block !important' : 'none !important'};
 `
 const myh1 = styled.h1`
 display:${props => props.pathlocation === 'language' || props.pathlocation === 'ondemand' ? 'none !important' : ''}

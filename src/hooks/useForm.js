@@ -32,23 +32,23 @@ export const useForm = (initialValues, dataValidations) => {
             setResponse(true);
         })
         .then((res)=>{
-          // const Toast = Swal.mixin({
-          //   toast: true,
-          //   position: 'center',
-          //   showConfirmButton: false,
-          //   timer: 3000,
-          //   timerProgressBar: true,
-          //   didOpen: (toast) => {
-          //     toast.addEventListener('mouseenter', Swal.stopTimer)
-          //     toast.addEventListener('mouseleave', Swal.resumeTimer)
-          //   }
-          // })
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'center',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
           
-          // Toast.fire({
-          //   icon: 'success',
-          //   title: 'Information sent successfully!'
-          // })
-          <SuccessAlert/>
+          Toast.fire({
+            icon: 'success',
+            title: 'Information sent successfully!'
+          })
+
         })
     };
 

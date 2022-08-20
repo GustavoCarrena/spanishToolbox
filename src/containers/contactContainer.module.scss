@@ -52,12 +52,6 @@
             .nameLastnameContainer{
                 @include mixin.flex-column-nowrap(center, center);
                 width: 100%;
-                .inputName{
-
-                }
-                .inputLastName{
-
-                }
             }
 
             .inputContainers{

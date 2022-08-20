@@ -9,7 +9,7 @@ import { SuccessAlert } from '../components/SuccessAlert';
 
 export const ContactContainer = () => {
 
-  const {form,errors,handleChange,handleBlur,loading,response,handleSubmit} = useForm(initialValues, formValidations);
+  const {form,errors,handleChange,handleBlur,loading,handleSubmit} = useForm(initialValues, formValidations);
 
   const navigate = useNavigate();
   const handleToHome = () =>{navigate('/home')};
@@ -124,13 +124,7 @@ export const ContactContainer = () => {
                   >
                   {loading ? <Loader/> : 'SUBMIT'}
                 </button>
-
-                  {/* {response && <SuccessAlert/>} */}
-                  
-
           </form>
-
-
         </div>
     </section>
   )
