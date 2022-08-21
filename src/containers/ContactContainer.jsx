@@ -18,8 +18,21 @@ export const ContactContainer = () => {
   return (
     <section className={styles.contactSection}>
         
+        <div className={styles.titleContainer}>
+          <img className={styles.title} src="assets/img/contactus/contact-puntos.svg" alt="about us" />
+        </div>
+
+        <div className={styles.sayHolaContainer}>
+          <img className={styles.img} src="assets/img/contactus/say.svg" alt="about us" />
+        </div>
+
         <div className={styles.contactContainer}>
           
+          <div className={styles.faqsContainer}>
+            <div className={styles.doubts}>ANY DOUBTS?</div>
+            <div className={styles.faqs}>FAQs</div>
+          </div>
+
           <div className={styles.toHomeContainer}>
             <span onClick={handleToHome} className={styles.toHome}></span>
             <span className={styles.actualPage}>Contact Us</span>
@@ -42,7 +55,7 @@ export const ContactContainer = () => {
                       onChange={handleChange}
                       required
                       />
-                      { errors.name && <span className={styles.errorsMsg}>{errors.name}</span>}
+                      { errors.name && <span className={`${styles.errorsMsg} ${styles.errorsMsgName}`}>{errors.name}</span>}
                   </div>
 
                    <div className={`${styles.lastNameContainer} ${styles.inputContainers}`}> 
@@ -128,6 +141,18 @@ export const ContactContainer = () => {
                 </button>
           </form>
         </div>
+
+        <div className={styles.contactImgContainer} >
+          <div className={styles.imgContainer}>
+            <img className={styles.logoImg} src="assets/img/contactus/logo-ig.svg" alt="instagram" />
+            <img className={styles.titleImg} src="assets/img/contactus/follow.svg" alt="instagram" />
+          </div>
+          <div className={styles.imgContainer}>
+            <img className={styles.logoImg} src="assets/img/contactus/logo-messenger.svg" alt="messenger" />
+            <img className={styles.titleImg} src="assets/img/contactus/contact.svg" alt="messenger" />          
+          </div>
+        </div>
+
         <EnrollNow/>
     </section>
   )
