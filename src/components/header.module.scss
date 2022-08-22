@@ -180,7 +180,33 @@
         padding: 3.8px 20px 0 5px !important;
         width: max-content;
     }
+
 }
+
+.linksContact{
+    @media(min-width:992px){
+        display: none !important;
+    }
+}
+
+.linksActive{
+    @media(min-width:992px) {
+        text-decoration: underline !important;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0) !important;
+        font-family: var(--montserrat-font) !important;
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        text-align: left !important;
+        color: var(--red) !important;
+        margin: 0px !important;
+        padding: 3.8px 20px 0 5px !important;
+        width: max-content;
+        cursor:auto;
+    }
+}
+
+
+
 
 .contactButton{
     @media(max-width:991px){

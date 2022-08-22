@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate} from "react-router-dom";
+import {useSetContents} from "../hooks/useSetContents";
 import styles from "./header.module.scss";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -10,11 +11,18 @@ import { animateScroll as scroll} from 'react-scroll';
 
 export const Header = () => {
 
+  const {screen} = useSetContents();
+
  const onClickUp = () => {
     setTimeout(() => {
       scroll.scrollToTop();      
     }, 0);
 
+ }
+
+ const navigate = useNavigate();
+ const handleToContact = () => {
+  navigate('/contact')
  }
 
 
@@ -75,23 +83,23 @@ export const Header = () => {
               className={`justify-content-end flex-grow-1 pe-3 ${styles.linksContainer}`}
               style={styles['.linksContainer']}
             >
-              <Nav.Link as={Link} to="/language"  smooth='true' duration={100} onClick={onClickUp} eventKey="1" className={styles.links} style={styles['.links']} >
+              <Nav.Link as={Link} to="/language"  smooth='true' duration={100} onClick={onClickUp} eventKey="1" className={ screen === 'language' ? `${styles.linksActive}` : `${styles.links}`}>
                 Language Courses
               </Nav.Link>
-              <Nav.Link as={Link} to="/ondemand" smooth='true' duration={100} onClick={onClickUp} eventKey="2" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/ondemand" smooth='true' duration={100} onClick={onClickUp} eventKey="2" className={ screen === 'ondemand' ? `${styles.linksActive}` : `${styles.links}`}>
                 On-Demand Courses
               </Nav.Link>
-              <Nav.Link as={Link} to="/about" smooth='true' duration={100} onClick={onClickUp} eventKey="3" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/about" smooth='true' duration={100} onClick={onClickUp} eventKey="3" className={ screen === 'about' ? `${styles.linksActive}` : `${styles.links}`}>
                 About Us
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact" smooth='true' duration={100} onClick={onClickUp} eventKey="4" className={styles.links} style={styles['.links']}>
+              <Nav.Link as={Link} to="/contact" smooth='true' duration={100} onClick={onClickUp} eventKey="4" className={`${styles.links} ${styles.linksContact}`} >
                 Contact
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
-        <button className={styles.contactButton}>Contact Us</button>
+        <button onClick={handleToContact} className={styles.contactButton}>Contact Us</button>
     </Navbar>
     </>
     );

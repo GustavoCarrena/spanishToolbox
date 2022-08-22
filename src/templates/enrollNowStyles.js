@@ -26,7 +26,7 @@ margin:${props => (props.pathlocation === 'about' ? '0 0 20px 0 !important' : ''
 @media(min-width:768px){
     font-size:${props => (props.pathlocation === 'about' ? '1.25rem !important' : '')};
     margin-top:${props => (props.pathlocation === 'about' ? '-150px !important' : '')};
-    z-index:${props => (props.pathlocation === 'about' ? '9999 !important' : '')};
+    z-index:${props => (props.pathlocation === 'about' ? '999 !important' : '')};
 }
 `
 const myPapersContainer = styled.div`

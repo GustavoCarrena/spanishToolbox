@@ -5,6 +5,49 @@
     width: 100%;
     background-color: var(--yellow);
 
+    .toHomeContainer{
+        @include mixin.flex-row-nowrap(center, flex-start);
+        position: relative;
+        top: 38px;
+        font-family: var(--montserrat-font);
+        font-weight: 600;
+        font-size: 0.6rem;
+        width: 100px;
+        left: 38px;
+        z-index: 999;
+        @media(min-width:500px){
+            left: 9%;
+            top: 47px;
+        }
+        @media(min-width:992px){
+            left: 4%;
+        }
+
+
+
+        .toHome{
+            color: var(--red);
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline var(--red);
+                color: var(--red);
+            }
+
+        }
+        .toHome:before{
+            content: 'Home >';
+        }
+
+        .actualPage{
+            margin-left: 1%;
+            color: var(--violet);
+            @media(min-width: 768px){
+                margin-left: 0.2%;
+            }
+        }
+    }
+
+
     .aboutUsContent{
         @include mixin.flex-column-nowrap(center, center);
         background-color: var(--white);

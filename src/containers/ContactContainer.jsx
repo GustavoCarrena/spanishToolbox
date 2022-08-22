@@ -59,7 +59,7 @@ export const ContactContainer = () => {
                   </div>
 
                    <div className={`${styles.lastNameContainer} ${styles.inputContainers}`}> 
-                    <label className={`${styles.labels} ${styles.labelLastName}`} htmlFor="lastname">Last</label>
+                    <label className={`${styles.labels} ${styles.labelLastName}`} htmlFor="lastname">Surname</label>
                     <input
                       className={ errors.lastname ? `${styles.inputsError}` :`${styles.inputs} ${styles.inputLastName}`}
                       type="text"

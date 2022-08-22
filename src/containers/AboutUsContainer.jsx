@@ -1,10 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { EnrollNow } from '../components/EnrollNow';
 import styles from './aboutUsContainer.module.scss';
 
 export const AboutUsContainer = () => {
+  
+  const navigate = useNavigate();
+  const handleToHome = () =>{navigate('/home')};
+  
   return (
     <section className={styles.aboutUsSection}>
+      
+      <div className={styles.toHomeContainer}>
+            <span onClick={handleToHome} className={styles.toHome}></span>
+            <span className={styles.actualPage}>Contact Us</span>
+      </div>
+      
       <div className={styles.aboutUsContent}>
         
         <header className={styles.aboutUsHeader}>
