@@ -40,6 +40,10 @@ const myPapersContainer = styled.div`
     right:${props => (props.pathlocation === 'contact' ? '12% !important' : '')};
     margin:${props => (props.pathlocation === 'contact' ? '-42px 0 0 0 !important' : '')};
 }
+@media(min-width:1024px){
+    right:${props => (props.pathlocation === 'contact' ? '14% !important' : '')};
+    margin:${props => (props.pathlocation === 'contact' ? '-94px 0 0 0 !important' : '')};
+}
 
 `
 
@@ -52,7 +56,8 @@ const myLampContainer = styled.div`
         width:${props => (props.pathlocation === 'about' ? '100px !important' : '')};
     }
     @media(min-width:1024px){
-        margin-top:${props => (props.pathlocation === 'contact' ? '65px !important' : '')};
+        margin-top:${props => (props.pathlocation === 'contact' ? '40px !important' : '')};
+        width:${props => (props.pathlocation === 'contact' ? '110px !important' : '')};
     }
 
 `
