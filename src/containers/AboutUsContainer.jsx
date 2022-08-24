@@ -13,7 +13,7 @@ export const AboutUsContainer = () => {
       
       <div className={styles.toHomeContainer}>
             <span onClick={handleToHome} className={styles.toHome}></span>
-            <span className={styles.actualPage}>Contact Us</span>
+            <span className={styles.actualPage}><span></span> About Us</span>
       </div>
       
       <div className={styles.aboutUsContent}>

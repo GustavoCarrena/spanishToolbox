@@ -7,6 +7,7 @@ import { HomeContainer } from './containers/HomeContainer';
 import { LanguageCourses } from './containers/LanguageCourses';
 import { AboutUsContainer } from './containers/AboutUsContainer';
 import { ContactContainer } from './containers/ContactContainer';
+import { RegularSpanishCourses } from './containers/RegularSpanishCourses';
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
         <Route path="/ondemand" element={<Ondemandcontainer/>}/>
         <Route path="/about" element={<AboutUsContainer/>}/>
         <Route path="/contact" element={<ContactContainer/>}/>
+        <Route path="/regular" element={<RegularSpanishCourses/>}/>
         <Route path="/*" element={<Navigate to="/home" replace />} />
       </Routes>
       <Footer/>

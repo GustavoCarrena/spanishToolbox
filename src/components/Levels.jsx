@@ -1,19 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useLevels } from '../hooks/useLevels';
+import { useSetContents } from '../hooks/useSetContents';
+import {MySection,MyOndaHeader, MyTitleContainer} from '../templates/levelsStyles';
 import styles from './levels.module.scss';
 
 export const Levels = ({text}) => {
 
-    const { levels,titles,text1,text2,text3,text4,handle, level} = useLevels(text)
+    const { levels,titles,text1,text2,text3,text4,handle, level} = useLevels(text);
+    const {screen} = useSetContents();
       
     return (
+        <>
+            <MyOndaHeader pathlocation={screen} className={styles.ondaHeader}>
+                <img className={styles.ondaHeaderImg} src="assets/img/generales/onda-06.svg" alt="onda" />
+            </MyOndaHeader>
+            
+            <MySection pathlocation={screen} className={styles.section}>
+            
 
-            <section className={styles.section}>
-        
-            <div className={styles.titleContainer}>
+            <MyTitleContainer pathlocation={screen} className={styles.titleContainer}>
                 <h6 className={styles.title}>LEVELS</h6>
                 <span className={styles.line}></span>
-            </div>
+            </MyTitleContainer>
     
             <div className={styles.boxContainer}>
                 <div className={styles.line}></div>
@@ -54,9 +62,9 @@ export const Levels = ({text}) => {
             </div>
         </div>
     
-    </section>
+    </MySection>
       
-
+    </>
 
             )
 

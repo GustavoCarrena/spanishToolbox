@@ -50,7 +50,7 @@ export const LetsLearn = () => {
                     <TextContainerShort pathlocation={screen} className={styles.textContainer}>
                         <p className={`${styles.firstCardText} ${styles.text}`}>{changeCardText(screen, firstCard)}</p>
                     </TextContainerShort>
-                    <button className={`${styles.firstCardButton} ${styles.btn}`} onClick={() => handleNavigate('/home')}>Read More</button>
+                    <button className={`${styles.firstCardButton} ${styles.btn}`} onClick={() => handleNavigate('/regular')}>Read More</button>
                 </div>
                 <div className={styles.cards}>
                     <div className={styles.imgContainer}>
