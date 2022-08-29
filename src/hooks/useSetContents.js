@@ -42,6 +42,10 @@ export const useSetContents = () => {
             case 'regular':
                 setEnrollTextBtn('Enroll Now');
                 break;
+
+            case 'history':
+                setEnrollTextBtn('Enroll Now');
+                break;
         }
 
     }, [screen])

@@ -1,0 +1,503 @@
+@use "../../styles/mixins.scss"as mixin;
+// @include mixin.flex-column-nowrap(center, center);
+.historySection {
+    background: linear-gradient(180deg, var(--yellow) 50%, var(--white) 50%);
+    margin-top: 48px;
+    padding-top: 7px;
+    .container {
+        @include mixin.flex-column-nowrap(center, center);
+        background-color: var(--white);
+        border-radius: 50px 50px 0 0;
+        margin: 40px 0 10px 0;
+        padding: 60px 0 0 0;
+        position: relative;
+        .toHomeContainer {
+            @include mixin.flex-row-nowrap(center, flex-start);
+            margin-left: 8%;
+            position: relative;
+            top: -47px;
+            font-family: var(--montserrat-font);
+            font-weight: 600;
+            font-size: 0.45rem;
+            align-self: flex-start;
+            width: 90%;
+            @media(min-width: 500px) {
+                margin-left: 4%;
+                font-size: 0.8rem;
+            }
+            @media(min-width: 768px) {
+                margin-left: unset;
+                padding-left: 4%;
+                width: 100%;
+                font-size: 0.8rem;
+            }
+            .toHome {
+                color: var(--red);
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline var(--red);
+                    color: var(--red);
+                }
+            }
+            .toHome:before {
+                content: 'Home > Argentine Culture Courses >';
+            }
+            .actualPage {
+                margin-left: 1%;
+                color: var(--violet);
+                @media(min-width: 768px) {
+                    margin-left: 0.2%;
+                }
+            }
+        }
+        .titleContainer {
+            @include mixin.flex-column-nowrap(center, center);
+            width: 100%;
+            margin-bottom: 25px;
+            @media(min-width: 768px) {
+                align-items: flex-start;
+                padding: 0 0 25px 4%;
+            }
+            .title {
+                font-family: var(--montserrat-font);
+                font-weight: 800;
+                font-size: 0.9rem;
+                color: var(--violet);
+                @media(min-width: 500px) {
+                    font-size: 1.6rem;
+                }
+            }
+            .secondTitle {
+                font-family: var(--montserrat-font);
+                font-style: italic;
+                font-size: 0.6rem;
+                color: var(--gray);
+            }
+        }
+        .cardContainer {
+            @include mixin.flex-column-nowrap(center, center);
+            width: 200px;
+            @media(min-width: 768px) {
+                @include mixin.flex-row-nowrap(center, space-between);
+                width: 705px;
+                height: 239px;
+            }
+            @media(min-width: 992px) {
+                @include mixin.flex-row-nowrap(center, space-between);
+                width: 914px;
+            }
+            .photoFirstContainer {
+                @include mixin.flex-column-nowrap(center, center);
+                margin-bottom: 20px;
+                width: 100%;
+                @media(min-width: 768px) {
+                    margin-bottom: 0;
+                    width: 35%;
+                    height: 100%;
+                }
+                @media(min-width: 992px) {
+                    width: 247px;
+                }
+                .photoFirst {
+                    width: 100%;
+                }
+                .btnFirst {
+                    color: var(--white);
+                    font-family: var(--montserrat-font);
+                    font-size: 0.9rem;
+                    width: 128px;
+                    height: 40px;
+                    border: none;
+                    border-radius: 30px;
+                    margin: -20px 0 0 0;
+                    background-color: var(--yellow);
+                }
+            }
+            .boxGeneralContainer {
+                @include mixin.flex-column-nowrap(center, center);
+                width: 290px;
+                @media(min-width: 768px) {
+                    width: 430px;
+                }
+                @media(min-width: 992px) {
+                    width: 645px;
+                }
+                .boxContainer {
+                    @include mixin.flex-column-nowrap(center, center);
+                    width: 100%;
+                    @media(min-width: 768px) {
+                        @include mixin.flex-row-nowrap(center, center);
+                        border-bottom: 1px solid var(--gray);
+                        &:first-child {
+                            border-top: 1px solid var(--gray);
+                        }
+                    }
+                    .logoContainer {
+                        @include mixin.flex-column-nowrap(center, center);
+                        width: 90px;
+                        height: 80px;
+                        .logo {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .textLogo {
+                            width: 100%;
+                            height: auto;
+                            color: var(--blue);
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            text-align: center;
+                            font-family: var(--montserrat-font);
+                            @media(min-width: 768px) {
+                                display: none;
+                            }
+                        }
+                    }
+                    .textContainer {
+                        @include mixin.flex-row-nowrap(center, center);
+                        width: 100%;
+                        @media(min-width: 768px) {
+                            @include mixin.flex-column-nowrap(flex-start, center);
+                        }
+                        .textLogoDesktop {
+                            @media(max-width: 767px) {
+                                display: none;
+                            }
+                            @media (min-width:768px) {
+                                width: 100%;
+                                height: auto;
+                                color: var(--blue);
+                                font-size: 0.9rem;
+                                font-weight: 600;
+                                font-family: var(--montserrat-font);
+                                margin: 0;
+                            }
+                        }
+                        .text {
+                            width: 100%;
+                            font-family: var(--montserrat-font);
+                            font-size: 0.8rem;
+                            color: var(--gray);
+                            text-align: center;
+                            @media(min-width: 768px) {
+                                text-align: start;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .secondCard {
+            @include mixin.flex-column-nowrap(center, center);
+            font-family: var(--montserrat-font);
+            font-size: 0.8rem;
+            color: var(--gray);
+            border-radius: 30px;
+            background-color: #eee;
+            box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
+            width: 288px;
+            margin-top: 60px;
+            @media(min-width: 768px) {
+                width: 725px;
+                margin-bottom: 20px;
+            }
+            @media(min-width: 992px) {
+                width: 920px;
+                height: 330px;
+            }
+            .textSecondCardContainer {
+                @include mixin.flex-column-nowrap(center, center);
+                width: 100%;
+                @media(min-width: 768px) {
+                    @include mixin.flex-row-nowrap(center, space-between);
+                    text-align: start;
+                }
+                @media(min-width: 992px) {
+                    margin-bottom: 23px;
+                }
+                .titleSecondCardContainer {
+                    width: 172px;
+                    border-bottom: 2px solid var(--green);
+                    margin: 20px 0;
+                    @media(min-width: 768px) {
+                        display: none;
+                    }
+                    .titleSecondCard {
+                        color: var(--blue);
+                        font-weight: 600;
+                        font-size: 1rem;
+                        text-align: center;
+                        margin: 0;
+                    }
+                }
+                .titleSecondCardContainerDesktop {
+                    @media(max-width: 767px) {
+                        display: none;
+                    }
+                    width: 172px;
+                    border-bottom: 2px solid var(--green);
+                    margin: 20px 0;
+                    align-self: flex-start;
+                    .titleSecondCardDesktop {
+                        color: var(--blue);
+                        font-weight: 600;
+                        font-size: 1rem;
+                        text-align: center;
+                        margin: 0;
+                    }
+                }
+                .textSecondCardContainer {
+                    @include mixin.flex-column-nowrap(center, center);
+                    text-align: start;
+                    font-style: italic;
+                    width: 90%;
+                    margin-bottom: 10px;
+                    @media(min-width: 768px) {
+                        width: 660px;
+                        padding: 0 10%;
+                    }
+                    .firstText {
+                        padding: 5px 0;
+                        .second {
+                            margin: 8px 0;
+                        }
+                    }
+                }
+            }
+            .imgSecondCardContainer {
+                width: 100%;
+                transform: scaleX(-1);
+                @media(min-width: 768px) {
+                    width: 70%;
+                    height: 100%;
+                }
+                @media(min-width: 768px) {
+                    height: 330px;
+                }
+                @media(min-width: 992px) {
+                    width: 40%;
+                    height: 306px;
+                }
+                .imgSecondCard {
+                    border-radius: 30px;
+                    width: 100%;
+                    height: 100%;
+                    @media(min-width: 768px) {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+        .thirdCard {
+            @include mixin.flex-column-nowrap(center, center);
+            font-family: var(--montserrat-font);
+            font-size: 0.8rem;
+            border-radius: 30px;
+            color: var(--gray);
+            background-color: #eee;
+            box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
+            width: 288px;
+            margin: 40px 0;
+            @media(min-width: 768px) {
+                @include mixin.flex-row-nowrap(center, center);
+                width: 725px;
+                height: 273px;
+                margin: 40px 0 0 0;
+            }
+            @media(min-width: 992px) {
+                width: 920px;
+                height: 330px;
+                margin: 40px 0 80px 0;
+            }
+            .imgThirdCardContainer {
+                width: 100%;
+                @media(min-width: 768px) {
+                    width: 434px;
+                    height: 100%;
+                }
+                @media(min-width: 992px) {
+                    width: 336px;
+                }
+                .imgThirdCard {
+                    border-radius: 30px;
+                    width: 100%;
+                    height: 100%;
+                    @media(min-width: 768px) {
+                        border-radius: 0;
+                    }
+                }
+            }
+            .thirdCardContainer {
+                @include mixin.flex-column-nowrap(center, center);
+                width: 90%;
+                @media(min-width: 768px) {
+                    padding: 0 3%;
+                }
+                @media(min-width: 992px) {
+                    width: 660px;
+                    margin-bottom: 15px;
+                }
+                .titleThirdCardContainer {
+                    border-bottom: 2px solid var(--red);
+                    margin: 20px 0;
+                    @media(min-width: 992px) {
+                        align-self: flex-start;
+                        margin-left: 12%;
+                    }
+                    .titleThirdCard {
+                        color: var(--blue);
+                        font-weight: 600;
+                        font-size: 1rem;
+                        text-align: center;
+                        margin: 0;
+                    }
+                }
+                .textThirdCardContainer {
+                    @include mixin.flex-column-nowrap(center, center);
+                    text-align: start;
+                    font-style: italic;
+                    width: 90%;
+                    margin-bottom: 10px;
+                    @media(min-width: 992px) {
+                        padding: 0 10%;
+                    }
+                    .thirdCardText {
+                        margin-bottom: 5px;
+                        .thirdCardText {
+                            padding: 0;
+                            .thirdCardTextLi {}
+                        }
+                    }
+                }
+            }
+        }
+        .syllabusContainer {
+            @include mixin.flex-column-nowrap(center, center);
+            .syllabusTitle {
+                @include mixin.flex-column-nowrap(center, center);
+                @media(min-width: 768px) {
+                    align-self: flex-start;
+                    padding-left: 3%;
+                    position: relative;
+                    bottom: -71px;
+                }
+                .title {
+                    font-size: 1.3rem;
+                    font-family: var(--montserrat-font);
+                    font-weight: 800;
+                    color: var(--blue);
+                    @media(min-width: 768px) {
+                        font-size: 1.9rem;
+                    }
+                }
+                .titleLine {
+                    width: 80%;
+                    height: 2px;
+                    background-color: var(--yellow);
+                }
+            }
+            .syllabusTextContainer {
+                @include mixin.flex-row-nowrap(center, center);
+                width: 97%;
+                margin-top: 30px;
+                @media(min-width: 768px) {
+                    width: 692px;
+                    height: 535px;
+                    margin: 30px 0 50px 11%;
+                    align-items: flex-start;
+                }
+                @media(min-width: 992px) {
+                    width: 880px;
+                    margin: 30px 0 50px 2%;
+                }
+                .syllabusTextAll {
+                    @include mixin.flex-column-nowrap(center, center);
+                    width: 50%;
+                    @media(min-width: 768px) {
+                        align-items: flex-start;
+                    }
+                    .bar {
+                        @media(max-width: 767px) {
+                            display: none;
+                        }
+                        position: absolute;
+                        width: 5px;
+                        height: 431px;
+                        background-color: var(--blue);
+                        left: -4%;
+                        top: 0;
+                    }
+                    .barTwo {
+                        @media(max-width: 767px) {
+                            display: none;
+                        }
+                        position: absolute;
+                        width: 5px;
+                        height: 466px;
+                        background-color: var(--blue);
+                        bottom: 203px;
+                        margin-left: -12px;
+                    }
+                    .syllabusitems {
+                        @include mixin.flex-column-nowrap(center, center);
+                        margin-bottom: 15px;
+                        @media(min-width: 768px) {
+                            @include mixin.flex-row-nowrap(center, center);
+                            width: 85%;
+                            height: 40px;
+                        }
+                        .syllabusNumber {
+                            @include mixin.flex-column-nowrap(center, center);
+                            width: 30px;
+                            height: 30px;
+                            color: var(--white);
+                            text-align: center;
+                            font-size: 0.9rem;
+                            margin-bottom: 5px;
+                            background-color: var(--blue);
+                            border-radius: 50%;
+                            .number {
+                                width: 100%;
+                                height: 100%;
+                                padding: 14% 3% 0 0;
+                            }
+                        }
+                        .syllabusText {
+                            font-family: var(--montserrat-font);
+                            font-size: 0.7rem;
+                            color: var(--gray);
+                            width: 90%;
+                            height: 65px;
+                            text-align: center;
+                            @media(min-width: 768px) {
+                                width: 90%;
+                                height: auto;
+                                text-align: start;
+                                margin-left: 7px;
+                            }
+                        }
+                    }
+                }
+                .syllabusTextOne {
+                    @media(min-width: 768px) {
+                        height: 452px;
+                        position: relative;
+                        top: 100px;
+                    }
+                }
+            }
+        }
+        .downloadButton {
+            margin-bottom: 40px;
+            width: 180px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: var(--blue);
+            color: var(--white);
+            border: none;
+            font-family: var(--montserrat-font);
+            font-weight: 600;
+        }
+    }
+}

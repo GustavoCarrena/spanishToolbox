@@ -12,8 +12,9 @@ export const Ondemandcontainer = () => {
   
   const handleToHome = () =>{
     navigate('/home');
-  }
-  
+    scroll.scrollToTop();
+  };
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>

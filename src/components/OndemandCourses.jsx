@@ -1,12 +1,14 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import { animateScroll as scroll} from 'react-scroll';
 import styles from './ondemandCourses.module.scss';
 
 export const OndemandCourses = () => {
 
   const navigate = useNavigate();
   const handleNavigate = (url) =>{
-    navigate(url)
+    navigate(url);
+    scroll.scrollToTop();
   };
 
   return (
@@ -26,7 +28,7 @@ export const OndemandCourses = () => {
                       of the Spanish-speaking countries covered. Available both in English and Spanish.</p>
                   </div>
                 </div>
-                <button className={`${styles.cardButton} ${styles.firstCardButton}`} onClick={() => handleNavigate('/home')}>Read More</button>
+                <button className={`${styles.cardButton} ${styles.firstCardButton}`} onClick={() => handleNavigate('/argentine')}>Read More</button>
             </div>
             <div className={`${styles.secondCard} ${styles.cards}`}>
                 <img className={styles.cardImg} src="assets/img/fotos/ruthson-zimmerman-Ws4wd-vJ9M0-unsplash.jpg" alt="photo"/>

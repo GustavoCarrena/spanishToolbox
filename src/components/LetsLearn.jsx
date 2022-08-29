@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {Myimg,Myh1, Myh1Language, TextContainer, TextContainerShort ,FirstTitle, SecondTitle, ThirdTitle, SecondButton, ThirdButton} from "../templates/letsLearnStyles";
 import {firstCard,secondCard,thirdCard,changeSectionTitle, changeCardImg, changeCardTitle, changeCardText} from '../helpers/letsLearnText';
 import {useSetContents} from "../hooks/useSetContents";
+import { animateScroll as scroll} from 'react-scroll';
 import styles from './letsLearn.module.scss';
 
 
@@ -12,7 +13,8 @@ export const LetsLearn = () => {
     
     const navigate = useNavigate();
     const handleNavigate = (route) =>{
-        navigate(route)
+        navigate(route);
+        scroll.scrollToTop();
     };
 
     return (

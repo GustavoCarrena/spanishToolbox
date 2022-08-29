@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { EnrollNow } from '../components/EnrollNow';
 import { Levels } from '../components/Levels';
 import { levelsText } from '../helpers/levelsText';
+import { animateScroll as scroll} from 'react-scroll';
+
 import styles from './regularSpanishCourses.module.scss';
 
 export const RegularSpanishCourses = () => {
@@ -10,6 +12,7 @@ export const RegularSpanishCourses = () => {
   const navigate = useNavigate();
   const handleToHome = () => {
     navigate('/language');
+    scroll.scrollToTop();
   }
 
   const text = levelsText();
@@ -29,7 +32,6 @@ export const RegularSpanishCourses = () => {
           <div className={styles.titleContainer}>
             <div className={styles.title}>REGULAR SPANISH COURSES</div>
           </div>
-
 
           <div className={`${styles.cardContainer} ${styles.firstCardContainer} `}>
 

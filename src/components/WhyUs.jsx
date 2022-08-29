@@ -2,25 +2,18 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import {usePath} from "../hooks/usePath";
 import styles from './whyUs.module.scss';
-import {mydiv, mySection, myimg, myfooter, myh6, myOldh6} from "../templates/whyUsStyles";
+import {MyImg, MySection, MyDiv, MyOldh6, Myh6, MyFooter} from "../templates/whyUsStyles";
 
 export const WhyUs = () => {
     
     const screen = usePath();
     
-    const MyImg = myimg;
-    const MySection = mySection;
-    const MyDiv = mydiv;
-    const MyOldh6 = myOldh6;
-    const Myh6 = myh6;
-    const MyFooter = myfooter;
-
-
-
     const navigate = useNavigate();
     const handleNavigate = (url) =>{
         navigate(url)
     };
+
+    console.log(screen);
 
   
     return (

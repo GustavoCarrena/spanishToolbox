@@ -1,0 +1,100 @@
+@use "../../styles/mixins.scss"as mixin;
+.ourTeachersSection {
+    @include mixin.flex-column-nowrap(center, center);
+    background-color: var(--white);
+    .titleContainer {
+        @include mixin.flex-column-nowrap(center, center);
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        @media(min-width: 768px) {
+            margin: 50px 0;
+        }
+        .title {
+            color: var(--blue);
+            font-family: var(--montserrat-font);
+            font-size: 1.2rem;
+            font-weight: 800;
+            @media(min-width: 500px) {
+                font-size: 1.4rem;
+            }
+            @media(min-width: 768px) {
+                font-size: 2.2rem;
+            }
+        }
+        .line {
+            width: 95px;
+            height: 2px;
+            background-color: var(--yellow);
+            @media(min-width: 768px) {
+                width: 190px;
+            }
+        }
+    }
+    .textContainer {
+        width: 250px;
+        text-align: center;
+        @media(min-width: 500px) {
+            width: 360px;
+        }
+        @media(min-width: 768px) {
+            width: 530px;
+        }
+        @media(min-width: 992px) {
+            width: 590px;
+            margin-bottom: 30px;
+        }
+        @media(min-width: 1024px) {
+            width: 650px;
+        }
+        .text {
+            width: 100%;
+            font-family: var(--montserrat-font);
+            color: var(--gray);
+            font-size: 0.8rem;
+            .boldText {
+                font-weight: 800;
+            }
+        }
+    }
+    .teachersContainer {
+        @include mixin.flex-column-nowrap(center, center);
+        margin: 10px 0 15px 0;
+        text-align: center;
+        @media(min-width: 768px) {
+            @include mixin.flex-row-nowrap(center, space-between);
+            width: 530px;
+        }
+        @media(min-width: 992px) {
+            width: 550px;
+        }
+        @media(min-width: 1024px) {
+            width: 650px;
+        }
+        .teachersCard {
+            @include mixin.flex-column-nowrap(center, space-between);
+            width: 220px;
+            margin: 0 0 40px 0;
+            @media(min-width: 1024px) {
+                width: 280px;
+            }
+            .teacherName {
+                width: 100%;
+                font-family: var(--montserrat-font);
+                color: var(--violet);
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            .teacherPhoto {
+                width: 100%;
+                border-radius: 30px;
+                margin-bottom: 10px;
+            }
+            .teacherLinkedin {
+                width: 25px;
+                align-self: flex-start;
+                margin-left: 5%;
+            }
+        }
+    }
+}

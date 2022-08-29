@@ -8,6 +8,8 @@ import { LanguageCourses } from './containers/LanguageCourses';
 import { AboutUsContainer } from './containers/AboutUsContainer';
 import { ContactContainer } from './containers/ContactContainer';
 import { RegularSpanishCourses } from './containers/RegularSpanishCourses';
+import { ArgentineCultureContainer } from './containers/ArgentineCultureContainer';
+import { HistoryCourseContainer } from './containers/HistoryCourseContainer';
 
 export const App = () => {
   return (
@@ -22,6 +24,8 @@ export const App = () => {
         <Route path="/about" element={<AboutUsContainer/>}/>
         <Route path="/contact" element={<ContactContainer/>}/>
         <Route path="/regular" element={<RegularSpanishCourses/>}/>
+        <Route path="/argentine" element={<ArgentineCultureContainer/>}/>
+        <Route path="/history" element={<HistoryCourseContainer/>}/>
         <Route path="/*" element={<Navigate to="/home" replace />} />
       </Routes>
       <Footer/>
