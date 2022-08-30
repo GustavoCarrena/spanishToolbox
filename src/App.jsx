@@ -10,6 +10,7 @@ import { ContactContainer } from './containers/ContactContainer';
 import { RegularSpanishCourses } from './containers/RegularSpanishCourses';
 import { ArgentineCultureContainer } from './containers/ArgentineCultureContainer';
 import { HistoryCourseContainer } from './containers/HistoryCourseContainer';
+import { EnrollNowContainer } from './containers/EnrollNowContainer';
 
 export const App = () => {
   return (
@@ -26,6 +27,7 @@ export const App = () => {
         <Route path="/regular" element={<RegularSpanishCourses/>}/>
         <Route path="/argentine" element={<ArgentineCultureContainer/>}/>
         <Route path="/history" element={<HistoryCourseContainer/>}/>
+        <Route path="/enroll" element={<EnrollNowContainer/>}/>
         <Route path="/*" element={<Navigate to="/home" replace />} />
       </Routes>
       <Footer/>

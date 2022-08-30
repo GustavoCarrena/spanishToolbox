@@ -76,8 +76,9 @@ const myPapersContainer = styled.div `
     bottom:${props => (props.pathlocation === 'regular' ? 'unset !important' : '')};
     margin-top:${props => (props.pathlocation === 'regular' ? '170px !important' : '')};
     right:${props => (props.pathlocation === 'argentine' ? '12% !important' : '')};
-    bottom:${props => (props.pathlocation === 'history' ? '-2697px !important' : '')};
+    bottom:${props => (props.pathlocation === 'history' ? 'unset !important' : '')};
     right:${props => (props.pathlocation === 'history' ? '12% !important' : '')};
+    margin-top:${props => (props.pathlocation === 'history' ? '110px !important' : '')};
 
 }
 @media(min-width:1024px){
@@ -112,8 +113,10 @@ const myLampContainer = styled.div `
         margin-top:${props => (props.pathlocation === 'contact' ? '40px !important' : '')};
         width:${props => (props.pathlocation === 'contact' ? '110px !important' : '')};
         width:${props => (props.pathlocation === 'regular' ? '110px !important' : '')};
+        width:${props => (props.pathlocation === 'history' ? '110px !important' : '')};
         margin-top:${props => (props.pathlocation === 'regular' ? '190px !important' : '')};
         margin-top:${props => (props.pathlocation === 'argentine' ? '60px !important' : '')};
+        margin-top:${props => (props.pathlocation === 'history' ? '95px !important' : '')};
     }
 `
 

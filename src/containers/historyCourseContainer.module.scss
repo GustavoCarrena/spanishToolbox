@@ -382,6 +382,9 @@
                     position: relative;
                     bottom: -71px;
                 }
+                @media(min-width: 992px) {
+                    padding-left: 4%;
+                }
                 .title {
                     font-size: 1.3rem;
                     font-family: var(--montserrat-font);
@@ -409,7 +412,7 @@
                 }
                 @media(min-width: 992px) {
                     width: 880px;
-                    margin: 30px 0 50px 2%;
+                    margin: 30px 0 50px 12%;
                 }
                 .syllabusTextAll {
                     @include mixin.flex-column-nowrap(center, center);
